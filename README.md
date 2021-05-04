@@ -1,4 +1,4 @@
-# Your Project's Name
+# Memory Game
 
 One or two paragraphs providing an overview of your project.
 
@@ -6,6 +6,15 @@ Essentially, this part is your sales pitch.
  
 ## UX
  
+[Home Page](assets/wireframes/memory_game.pdf)
+
+This is a memory game targgeted for children. There are eight boxes. Four of them light up in a ramdom order. The user repeats the order by clicking on the boxes.
+The score for each sequence is recorded below the game.
+
+
+
+
+
 Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
 
 In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
@@ -79,3 +88,10 @@ In addition, if it is not obvious, you should also describe how to run your code
 ### Acknowledgements
 
 - I received inspiration for this project from X
+
+### Revision History
+
+- Initial commit. Add Project README and Wireframe.
+- Add Code Institute project README from https://github.com/Code-Institute-Solutions/readme-template
+- Add wireframe [Home Page](assets/wireframes/memory_game.pdf)
+- 4th May 2021 17:52
