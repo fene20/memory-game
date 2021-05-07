@@ -95,3 +95,7 @@ In addition, if it is not obvious, you should also describe how to run your code
 - Add Code Institute project README from https://github.com/Code-Institute-Solutions/readme-template
 - Add wireframe [Home Page](assets/wireframes/memory_game.pdf)
 - 4th May 2021 17:52
+
+- Add a blank JS file to check out repo functionality.
+- Losing files from gitpod.
+- 7th May 2021 23:15
