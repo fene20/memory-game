@@ -102,3 +102,6 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 - Add text to game.js file to check out repo functionality.
 - 8th May 2021 13:09
+
+- function genSqrSequence to generate random square sequence working
+- 8th May 2021 14:41
