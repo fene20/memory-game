@@ -99,3 +99,6 @@ In addition, if it is not obvious, you should also describe how to run your code
 - Add a blank JS file to check out repo functionality.
 - Losing files from gitpod.
 - 7th May 2021 23:15
+
+- Add text to game.js file to check out repo functionality.
+- 8th May 2021 13:09
