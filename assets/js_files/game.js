@@ -4,10 +4,40 @@
 var totalNoBoxes = 8; // Support future expansion.
 var array = [4];
 var debug = true;
+var boxDelay = 1000;
 
-array = genSqrSequence(4);
+
+
+//array = genSqrSequence(4);
 
 console.log(array);
+
+
+// Use onclick="runGame();"
+
+
+let start = document.getElementById('button');
+
+start.addEventListener('click', runGame);
+
+
+
+function runGame(event){
+
+    // Start on Level 1
+    let level = 4;
+
+    let gameSequence = genSqrSequence(level);
+
+    outputSqrSequence(gameSequence);
+
+}
+
+
+
+
+
+
 
 
 //Generate Square Sequence
@@ -38,8 +68,6 @@ function genSqrSequence(level){
         }else{
           // Loop again
         }
-
-        
     }
 
   if(debug === true){
@@ -47,3 +75,29 @@ function genSqrSequence(level){
   } 
   return randomSqrSeq;
 }
+
+
+//Output Square Sequence
+function outputSqrSequence(boxes){
+
+    let boxId = "";
+
+    for ( let box in boxes){
+        boxId = "test" + boxes[box] ;
+        document.getElementById(boxId).style.backgroundColor = "red";
+
+       // Add delay
+    }
+
+    //document.getElementById("test2").style.backgroundColor = "red";   
+
+}
+
+
+
+
+
+
+
+
+

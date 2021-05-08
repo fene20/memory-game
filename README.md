@@ -79,6 +79,11 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 ## Credits
 
+Project started with Code Institute Challenge 54_JavaScript_HDE_Working_With_Functions.
+
+
+
+
 ### Content
 - The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
 
@@ -105,3 +110,6 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 - function genSqrSequence to generate random square sequence working
 - 8th May 2021 14:41
+
+- Add outputSqrSequence function to turn on squares
+- 8th May 2021 19:32
