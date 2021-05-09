@@ -6,6 +6,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
   </head>
   <body>
+<!--
     <div id='test1' class="box" onclick="boxClicked ();"></div>
     <div id='test2' class="box" onclick="boxClicked ();"></div>
     <div id='test3' class="box" onclick="boxClicked ();"></div>
@@ -13,8 +14,25 @@
     <div id='test5' class="box" onclick="boxClicked ();"></div>
     <div id='test6' class="box" onclick="boxClicked ();"></div>
     <div id='test7' class="box" onclick="boxClicked ();"></div>
-    <div id='test8' class="box" onclick="boxClicked ();"></div>
-    <button id='button' onclick="boxClicked ();">Start</button>
-    <script src="assets/js_files/game.js"></script>
+    <div id='test8' class="box" onclick="boxClicked ();"></div>-->
+
+    <div id='test0' class="box" data-type="box" name="box"></div>
+    <div id='test1' class="box" data-type="box" name="box"></div>
+    <div id='test2' class="box" data-type="box" name="box"></div>
+    <div id='test3' class="box" data-type="box" name="box"></div>
+    <div id='test4' class="box" data-type="box" name="box"></div>
+    <div id='test5' class="box" data-type="box" name="box"></div>
+    <div id='test6' class="box" data-type="box" name="box"></div>
+    <div id='test7' class="box" data-type="box" name="box"></div>
+
+
+    <!--<button id='button' onclick="boxClicked ();">Start</button>-->
+    <div class="score-area">
+        <p class="scores">Level: <span id="level">0</span></p>
+	    <p class="scores">Correct Answers: <span id="score">0</span></p>
+	    <p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>
+    </div>
+    <button id='button' class="button" data-type="submit" name="box">Start</button>   
+    <script src="assets/js_files/script.js"></script>
   </body>
 </html>

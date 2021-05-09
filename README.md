@@ -94,6 +94,7 @@ Project started with Code Institute Challenge 54_JavaScript_HDE_Working_With_Fun
 - I received inspiration for this project from X . . . . 
 - The first commit was a direct 100% copy of Code Institute 54_JavaScript_HDE_Working_With_Functions Challenge
 - Got timeout help from [GeeksforGeeks](https://www.geeksforgeeks.org/how-to-add-a-delay-in-a-javascript-loop/)
+- Scores from CodeInstitute JS Essentials Project
 
 ### Challenges
 - It took a while to figure out how to use setTimeout as a sequential delay.

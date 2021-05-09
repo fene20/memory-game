@@ -23,32 +23,40 @@ let start = document.getElementById('button');
 start.addEventListener('click', runGame);
 
 
+let boxes = document.getElementsByClassName("box");
+
+for(i = 0, l = boxes.length; i < l; i++) {
+    boxes[i].addEventListener('click', boxClicked);
+}  
 
 
+function boxClicked(event){
+    if (this.style.backgroundColor ===  "orange"){
+        this.style.backgroundColor = "green";
+    }else{
+        this.style.backgroundColor = "orange";
+    }
+    console.log("Box Clicked")
+}
 
 
-
-
-
+// Run Game
 function runGame(event){
 
     // Start on Level 1
-    let level = 4;
+    let level = 2;
 
     let gameSequence = genSqrSequence(level);
 
     outputSqrSequence(gameSequence);
 
+    playerSequence(level);
+
 }
 
 
 
-
-
-
-
-
-//Generate Square Sequence
+// Generate Square Sequence
 function genSqrSequence(level){
 
     // Randon Square Sequence
@@ -85,10 +93,11 @@ function genSqrSequence(level){
 }
 
 
-//Output Square Sequence
+// Output Square Sequence
 function outputSqrSequence(boxes){
 
     let boxId = "";
+    let timeIndex = 0;
 
     for ( let box in boxes){
 
@@ -98,19 +107,35 @@ function outputSqrSequence(boxes){
         sqrOutDelay(timeIndex, boxId);
         
     }
+    timeIndex++;
+    sqrOutDelay(timeIndex, "off");
 
 }
 
 
 
-
-
+// Output squares and then turn them "all" off
 function sqrOutDelay(timeIndex, boxId) {
-  setTimeout(function() {
+    setTimeout(function () {
 
-      document.getElementById(boxId).style.backgroundColor = "red";
-      
-  }, 500 * timeIndex);
-}s
+        let idOff = "";
+        if (boxId === "off") {
+            // Easy solution, just turn all boxes green.
+            for (let i = 1; i < totalNoBoxes+1; i++) {
+                idOff = "test" + i ;
+                document.getElementById(idOff).style.backgroundColor = "green";
+            }
+        }else {
+            document.getElementById(boxId).style.backgroundColor = "red";
+        }
+    }, 1000 * timeIndex);
+}
 
 
+// Capture player sequence
+function playerSequence(level){
+
+
+
+
+}
