@@ -135,3 +135,6 @@ Added scores to HTML from Code Institute JavaScript Walkthrough Project.
 
 - Game running with events
 - 9th May 2021 19:25
+
+- Code getting id of box clicked
+- 9th May 2021 21:04
