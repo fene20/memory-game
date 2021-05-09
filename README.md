@@ -138,3 +138,6 @@ Added scores to HTML from Code Institute JavaScript Walkthrough Project.
 
 - Code getting id of box clicked
 - 9th May 2021 21:04
+
+- Added JS pseudo code
+- 10th May 2021 00:44

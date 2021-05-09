@@ -19,6 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
         temp = this.getAttribute("id");
         console.log(temp);
 
+
+        //update player buffer or array
+        //but don't update if the same button is hit again
+        waitForPlayer();
+
         if (this.style.backgroundColor === "orange") {
           this.style.backgroundColor = "green";
         } else {
@@ -115,6 +120,8 @@ function outputSqrSequence(boxes) {
   timeIndex++;
   sqrOutDelay(timeIndex, "off");
 
+  // update game buffer or array .push
+
 }
 
 
@@ -139,4 +146,31 @@ function sqrOutDelay(timeIndex, boxId) {
       document.getElementById(boxId).style.backgroundColor = "red";
     }
   }, 2000 * timeIndex);
+}
+
+function waitForPlayer() {
+
+  // Credit CodeInstitute JS Essentials Project
+  let level = parseInt(document.getElementById("level").innerText);
+
+  //if player buffer > level ignore additional button presses
+
+  // if player buffer = level call then{
+
+  // Credit CodeInstitute JS Essentials Project
+  let level = parseInt(document.getElementById("level").innerText);
+  let score = parseInt(document.getElementById("score").innerText);
+
+  let correctSequence = false;
+  // loop to check two buffers are equal
+
+  // if correctSequence = true then update score
+
+  // if score > 5 then increase level by 1.
+
+
+  // end of wait for player}
+
+
+  //
 }
