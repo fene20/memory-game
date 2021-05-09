@@ -80,7 +80,7 @@ In addition, if it is not obvious, you should also describe how to run your code
 ## Credits
 
 Project started with Code Institute Challenge 54_JavaScript_HDE_Working_With_Functions.
-
+Added scores to HTML from Code Institute JavaScript Walkthrough Project.
 
 
 
@@ -128,4 +128,10 @@ Project started with Code Institute Challenge 54_JavaScript_HDE_Working_With_Fun
 - 8th May 2021 19:32
 
 - sqrOutDelay function to output squares with a delay working
-- 9th May 2021 14.47
+- 9th May 2021 14:47
+
+- Added script.js with event listner functionality
+- 9th May 2021 18:13
+
+- Game running with events
+- 9th May 2021 19:25
