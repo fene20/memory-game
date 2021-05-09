@@ -91,8 +91,20 @@ Project started with Code Institute Challenge 54_JavaScript_HDE_Working_With_Fun
 - The photos used in this site were obtained from ...
 
 ### Acknowledgements
+- I received inspiration for this project from X . . . . 
+- The first commit was a direct 100% copy of Code Institute 54_JavaScript_HDE_Working_With_Functions Challenge
+- Got timeout help from [GeeksforGeeks](https://www.geeksforgeeks.org/how-to-add-a-delay-in-a-javascript-loop/)
 
-- I received inspiration for this project from X
+### Challenges
+- It took a while to figure out how to use setTimeout as a sequential delay.
+- Initially all squares were updating at the same time but all a fixed delay later.
+- The JS code runs on and cannot be paused but an output can be paused.
+- The output delays then need to be multiplied up.
+- GeeksforGeeks had a nice explaination.
+- [GeeksforGeeks](https://www.geeksforgeeks.org/how-to-add-a-delay-in-a-javascript-loop/)
+- Also got caught here using strings in mathematical calculations.
+
+
 
 ### Revision History
 
@@ -113,3 +125,6 @@ Project started with Code Institute Challenge 54_JavaScript_HDE_Working_With_Fun
 
 - Add outputSqrSequence function to turn on squares
 - 8th May 2021 19:32
+
+- sqrOutDelay function to output squares with a delay working
+- 9th May 2021 14.47

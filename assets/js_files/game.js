@@ -6,7 +6,9 @@ var array = [4];
 var debug = true;
 var boxDelay = 1000;
 
+var timeout;
 
+var time;
 
 //array = genSqrSequence(4);
 
@@ -19,6 +21,12 @@ console.log(array);
 let start = document.getElementById('button');
 
 start.addEventListener('click', runGame);
+
+
+
+
+
+
 
 
 
@@ -51,7 +59,7 @@ function genSqrSequence(level){
 
     let boxIndex = 1;
     while (boxIndex < level) {
-
+        
         let uniqueBoxNumber = true;
 
         let number = Math.floor(Math.random() * totalNoBoxes) + 1;
@@ -83,13 +91,13 @@ function outputSqrSequence(boxes){
     let boxId = "";
 
     for ( let box in boxes){
+
+        timeIndex = parseInt(box) + 1;
         boxId = "test" + boxes[box] ;
-        document.getElementById(boxId).style.backgroundColor = "red";
 
-       // Add delay
+        sqrOutDelay(timeIndex, boxId);
+        
     }
-
-    //document.getElementById("test2").style.backgroundColor = "red";   
 
 }
 
@@ -97,7 +105,12 @@ function outputSqrSequence(boxes){
 
 
 
+function sqrOutDelay(timeIndex, boxId) {
+  setTimeout(function() {
 
-
+      document.getElementById(boxId).style.backgroundColor = "red";
+      
+  }, 500 * timeIndex);
+}s
 
 
