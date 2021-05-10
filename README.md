@@ -141,3 +141,7 @@ Added scores to HTML from Code Institute JavaScript Walkthrough Project.
 
 - Added JS pseudo code
 - 10th May 2021 00:44
+
+- Game is working
+- Some nested functions removed
+- 10th May 2021 21:57

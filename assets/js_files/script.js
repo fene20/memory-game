@@ -1,41 +1,44 @@
-
 // Globals to get the code running
-var playerSequenceArray = [];
+var playerSequence = [];
+var gameSequence = [];
 
+
+// This script has 2 significant function calls
+// runGameSequence() which is called when the Start button is pressed/clicked.
+// getPlayerSequence() which is called every time a box is pressed/clicked.
+// When the getPlayerSequence() function is called ${level} times the scores get updated and the level is updated.
 
 
 // Credit: JS Essentials project
-// Get the button elements, and add event listeners to them
+// Get the elements and add event listeners to them
 document.addEventListener("DOMContentLoaded", function () {
 
-  //alert("DOM loaded");
-  console.log("DOM loaded");
+  console.log("Event: DOM loaded");
   let buttons = document.getElementsByName("box");
 
   for (let button of buttons) {
     button.addEventListener("click", function () {
       if (this.getAttribute("data-type") === "submit") {
 
-        console.log("You clicked Submit");
+        console.log("");
+        console.log("Event: clicked start");
         runGameSequence();
 
       } else if (this.getAttribute("data-type") === "box") {
 
-        console.log("You clicked a box");
-
         boxClicked = this.getAttribute("id");
-        console.log(boxClicked);
+
+        console.log("");
+        console.log(`Event: You clicked box: ${boxClicked}`);
 
         getPlayerSequence(boxClicked);
 
-        // TBD. Prevent recording of multiple player clicks of same box.
+
         if (this.style.backgroundColor === "orange") {
           this.style.backgroundColor = "green";
         } else {
           this.style.backgroundColor = "orange";
         }
-        console.log("Box Clicked")
-
 
       } else {
         let gameType = this.getAttribute("data-type");
@@ -47,13 +50,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+
+
 function runGameSequence() {
 
-  playerSequenceArray.push("test"); // add any text to prevent reading undefined later.
-  console.log(`Player Array Start: ${playerSequenceArray}`);
-
-  console.log("Run Game");
-  let gameSequence = [];
+  playerSequence.push("test"); // add any text to prevent reading undefined later.
+  console.log(`Player Array at Start: ${playerSequence}`);
 
   gameSequence = genSqrSequence();
 
@@ -72,36 +74,52 @@ function genSqrSequence() {
   let level = parseInt(document.getElementById("level").innerText);
   let totalNoBoxes = parseInt(document.getElementById("totalBoxes").innerText);
 
-  console.log(`genSqrSequence Level: ${level}`);
+  console.log(`Generating random numbers for Level: ${level}`);
 
   // Randon Square Sequence
+  let randomSeq = [level];
   let randomSqrSeq = [level];
 
   // The first number cannot be a duplicate.
-  randomSqrSeq[0] = Math.floor(Math.random() * totalNoBoxes);
+  randomSeq[0] = Math.floor(Math.random() * totalNoBoxes);
+  randomSqrSeq[0] = "sqr" + randomSeq[0];
 
+  console.log(`Random Number: ${randomSeq[0]}`);
   console.log(`randomSqrSeq: ${randomSqrSeq[0]}`);
 
 
   let boxIndex = 1;
+
   while (boxIndex < level) {
+
+    console.log(`Box Index: ${boxIndex}`);
 
     let uniqueBoxNumber = true;
 
     let number = Math.floor(Math.random() * totalNoBoxes);
+    console.log(`Random Number: ${number}`);
 
     for (let i = 0; i < boxIndex; i++) {
-      if (number === randomSqrSeq[i]) {
+
+      console.log(`Is Random Number ${number} = array number ${randomSeq[i]} with index ${i}`);
+      if (number === randomSeq[i]) {
         uniqueBoxNumber = false;
+        console.log("Not Unique!!!!");
+      } else {
+        console.log("Unique!!!!")
       }
     }
 
     if (uniqueBoxNumber === true) {
-      randomSqrSeq[boxIndex] = number;
+
+      randomSeq[boxIndex] = number;
+      randomSqrSeq[boxIndex] = "sqr" + number;
       console.log(`randomSqrSeq: ${randomSqrSeq[boxIndex]}`);
+
+      // Index to the next box number when the random number is unique
       boxIndex++;
     } else {
-      // Loop again
+      // Loop again for the same array element
     }
   }
 
@@ -112,23 +130,19 @@ function genSqrSequence() {
 function outputSqrSequence(boxes) {
 
   let boxId = "";
-  let timeIndex = 0;
+  let timeMultiplier = 1;
 
   for (let box in boxes) {
 
-    timeIndex = parseInt(box) + 1;
-    boxId = "sqr" + boxes[box];
+    console.log(`Turn on box: ${boxes[box]}`);
 
-    sqrOutDelay(timeIndex, boxId);
-
+    sqrOutDelay(timeMultiplier, boxes[box]);
+    timeMultiplier++;
   }
-  timeIndex++;
-  sqrOutDelay(timeIndex, "off");
 
-  //addToGameArray(boxId);
+  sqrOutDelay(timeMultiplier, "off");
 
 }
-
 
 
 // Output squares and then turn them "all" off
@@ -153,76 +167,142 @@ function sqrOutDelay(timeIndex, boxId) {
   }, 2000 * timeIndex);
 }
 
+
+
+
 function getPlayerSequence(latestboxClicked) {
 
-  //var playerSequenceArray = [];
+  //var playerSequence = [];
+  console.log("");
+  // while clicked square count is less than expected for the level.
 
-  let previousBoxClicked = playerSequenceArray[0];
+  let countBeforeUpdate = playerSequence.length;
+  console.log(`player array size before update: ${countBeforeUpdate}`);
 
-  console.log(`Previous Box Clicked: ${previousBoxClicked}`);
+
+  // Credit CodeInstitute JS Essentials Project
+  let level = parseInt(document.getElementById("level").innerText);
+
+  let testBox = playerSequence[0]; // for debug only
+
+  console.log(`test Box: ${testBox}`);
   console.log(`Latest Box Clicked: ${latestboxClicked}`);
 
-  updateArray = true;
+  console.log(`Click count: ${countBeforeUpdate}`);
+  console.log(`Level: ${level}`);
 
-  for (let box in playerSequenceArray) {
 
-    // Prevent recording of multiple player clicks of same box.
-    if (latestboxClicked === playerSequenceArray[box]) {
-      updateArray = false;
-      console.log("Don't update player array");
+  // Update array while count is < level
+  // note +1 for extra "test" array element
+  if (countBeforeUpdate < (level + 1)) {
+    console.log("Count less than level");
+
+
+    updateArray = true;
+
+    for (let box in playerSequence) {
+
+      // Prevent recording of multiple player clicks of same box.
+      if (latestboxClicked === playerSequence[box]) {
+        updateArray = false;
+        console.log("Don't update player array");
+      }
+
+    }
+
+
+    if (updateArray === true) {
+      playerSequence.push(latestboxClicked);
+      console.log("Update player array");
+    }
+
+
+    console.log(`Latest Box Clicked: ${playerSequence.length}`);
+
+
+  } else {
+    console.log("Count greater than level");
+  }
+
+  let countAfterUpdate = playerSequence.length;
+  console.log(`player array size after update:: ${countAfterUpdate}`);
+
+
+  if (countAfterUpdate === (level + 1)) {
+    console.log("Correct Array Size");
+    sqrOutDelay(1, "off");
+    isPlayerSequenceCorrect();
+  } else {
+    console.log("Not correct Array Size yet");
+  }
+
+}
+
+
+
+
+function isPlayerSequenceCorrect() {
+
+  let level = parseInt(document.getElementById("level").innerText);
+
+  console.log("");
+  console.log(`Level: ${level}`);
+  console.log(`Game Sequence Array: ${gameSequence}`);
+  console.log(`Player Sequence Array: ${playerSequence}`);
+
+  let isScoreCorrect = true;
+
+  for (let index = 0; index < level; index++) {
+
+    console.log(`Game Sequence Number: ${gameSequence[index]}`);
+    console.log(`Player Sequence Number: ${playerSequence[index + 1]}`);
+
+    if (gameSequence[index] === playerSequence[index + 1]) {
+      // Sequence match
+    } else {
+      // Sequence mismatch
+      isScoreCorrect = false;
     }
 
   }
 
+  // Clear two arrays for next run.
+  playerSequence = [];
+  gameSequence = [];
 
-  if (updateArray === true) {
-    playerSequenceArray.push(latestboxClicked);
-    console.log("Update player array");
+
+  // Update scores
+  let correctScore = parseInt(document.getElementById("correct").innerText);
+  let incorrectScore = parseInt(document.getElementById("incorrect").innerText);
+
+  if (isScoreCorrect === true) {
+    document.getElementById("correct").innerText = ++correctScore;
+    updateLevel(correctScore);
+  } else {
+    document.getElementById("incorrect").innerText = ++incorrectScore;
   }
 
-  console.log(`Updated Player array: ${playerSequenceArray}`);
-
-  //update player buffer or array
-  //but don't update if the same button is hit again
-
-
-  // Credit CodeInstitute JS Essentials Project
-  //let level = parseInt(document.getElementById("level").innerText);
-
-  //if player buffer > level ignore additional button presses
-
-  // if player buffer = level call then{
-
-  // Credit CodeInstitute JS Essentials Project
-  //let level = parseInt(document.getElementById("level").innerText);
-  //let score = parseInt(document.getElementById("score").innerText);
-
-  //let correctSequence = false;
-  // loop to check two buffers are equal
-
-  // if correctSequence = true then update score
-
-  // Credit CodeInstitute JS Essentials Project
-  //  let oldScore = parseInt(document.getElementById("score").innerText);
-  //  document.getElementById("score").innerText = ++oldScore;
-  // if score > 5 then increase level by 1.
-
-
-  // end of wait for player}
-
-
-  //
 }
 
-// Add the game sequence to an array
-//function addToGameArray(boxId){
 
-//let gameSequence = parseInt(document.getElementById("game_sequence").innerText);
 
-//gameSequenceArray.push(boxId);
 
-//console.log(`Game Array: ${gameSequenceArray}`);
-  //  let oldScore = parseInt(document.getElementById("score").innerText);
-//document.getElementById("game_sequence").innerText = ++oldScore;
+function updateLevel(correctScore) {
 
-//}
+  let totalNoBoxes = parseInt(document.getElementById("totalBoxes").innerText);
+  let level = parseInt(document.getElementById("level").innerText);
+  let scoreAtLevel = 3; // 3 for debug
+  let nextLevel = 1;
+
+  nextLevel = correctScore / scoreAtLevel;
+  console.log(`Next Level is: ${nextLevel} for ${correctScore} score at level ${level}`);
+
+  if (nextLevel >= level) {
+    document.getElementById("level").innerText = ++level;
+  }
+
+  if (level > totalNoBoxes) {
+    alert("Game Over");
+  }
+
+}
