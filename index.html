@@ -2,35 +2,72 @@
 <html lang="en-US">
 
 <head>
-	<title>Working With JavaScript Functions</title>
-	<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
-	 crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+        integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
-	</script>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
+	  crossorigin="anonymous"></script>-->
 </head>
 
+<header>
+
+    <div>
+        <a href="index.html" class="heading" id="icon"><i class="fab fa-buromobelexperte"></i></a>
+    </div>
+    <div>
+        <h2 class="heading" id="memory_game">Memory Game</h2>
+    </div>
+
+</header>
+
+
 <body>
+    <div id="info_top">
+        <P>Just repeat the box sequence as you see it on the screen</P>
+        <button id='button' class="button" data-type="start" name="box">Start</button>
+    </div>
 
-	<div id='sqr0' class="box" data-type="box" name="box">0</div>
-	<div id='sqr1' class="box" data-type="box" name="box">1</div>
-	<div id='sqr2' class="box" data-type="box" name="box">2</div>
-	<div id='sqr3' class="box" data-type="box" name="box">3</div>
-	<div id='sqr4' class="box" data-type="box" name="box">4</div>
-	<div id='sqr5' class="box" data-type="box" name="box">5</div>
-	<div id='sqr6' class="box" data-type="box" name="box">6</div>
-	<div id='sqr7' class="box" data-type="box" name="box">7</div>
-	<div id='sqr8' class="box" data-type="box" name="box">8</div>
+    <div id="level_div">
+        <p>
+            <h2 class="scores">Level: <span id="level">1</span></h2>
+        </p>
+    </div>
+    <div id="row_1">
+        <div id="sqr0" class="box" data-type="box" name="box">0</div>
+        <div id="sqr1" class="box" data-type="box" name="box">1</div>
+        <div id="sqr2" class="box" data-type="box" name="box">2</div>
+    </div>
+    <div id="row_2">
+        <div id="sqr3" class="box" data-type="box" name="box">3</div>
+        <div id="sqr4" class="box" data-type="box" name="box">4</div>
+        <div id="sqr5" class="box" data-type="box" name="box">5</div>
+    </div>
+    <div id="row_3">
+        <div id="sqr6" class="box" data-type="box" name="box">6</div>
+        <div id="sqr7" class="box" data-type="box" name="box">7</div>
+        <div id="sqr8" class="box" data-type="box" name="box">8</div>
+    </div>
 
-	<div class="score-area">
-		<p class="scores">Level: <span id="level">1</span></p>
-    <p class="scores">Total Boxes: <span id="totalBoxes">9</span></p>
-    <p class="scores">Game Sequence: <span id="game_sequence"></span></p>
-    <p class="scores">User Sequence: <span id="user_sequence"></span></p>    
-	  <p class="scores">Correct Answers: <span id="correct">0</span></p>
-	  <p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>
-  </div>
-    <button id='button' class="button" data-type="submit" name="box">Start</button>   
+    <div id="info_bottom">
+        <button id="button" class="button" data-type="start" name="box">Next Game</button>
+    </div>
+
+    <div class="score_area">
+        <p class="scores">Correct Answers: <span id="correct">0</span></p>
+        <p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>
+    </div>
+
+    <div class="debug-area">
+        <p class="debug">Total Boxes: <span id="totalBoxes">9</span></p>
+        <p class="debug">Game Sequence: <span id="game_sequence"></span></p>
+        <p class="debug">User Sequence: <span id="user_sequence"></span></p>
+    </div>
+
     <script src="assets/js_files/script.js"></script>
-  </body>
+</body>
+
 </html>

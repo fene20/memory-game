@@ -12,6 +12,9 @@ This is a memory game targgeted for children. There are eight boxes. Four of the
 The score for each sequence is recorded below the game.
 
 
+Children will not usually have access to a laptop or a desktop.
+This game must be iPad first then mobile.
+The game must not make noise.
 
 
 
@@ -109,39 +112,43 @@ Added scores to HTML from Code Institute JavaScript Walkthrough Project.
 
 ### Revision History
 
-- Initial commit. Add Project README and Wireframe.
+Initial commit. Add Project README and Wireframe.
 - Add Code Institute project README from https://github.com/Code-Institute-Solutions/readme-template
 - Add wireframe [Home Page](assets/wireframes/memory_game.pdf)
 - 4th May 2021 17:52
 
-- Add a blank JS file to check out repo functionality.
+Add a blank JS file to check out repo functionality.
 - Losing files from gitpod.
 - 7th May 2021 23:15
 
-- Add text to game.js file to check out repo functionality.
+Add text to game.js file to check out repo functionality.
 - 8th May 2021 13:09
 
-- function genSqrSequence to generate random square sequence working
+function genSqrSequence to generate random square sequence working
 - 8th May 2021 14:41
 
-- Add outputSqrSequence function to turn on squares
+Add outputSqrSequence function to turn on squares
 - 8th May 2021 19:32
 
-- sqrOutDelay function to output squares with a delay working
+sqrOutDelay function to output squares with a delay working
 - 9th May 2021 14:47
 
-- Added script.js with event listner functionality
+Added script.js with event listner functionality
 - 9th May 2021 18:13
 
-- Game running with events
+Game running with events
 - 9th May 2021 19:25
 
-- Code getting id of box clicked
+Code getting id of box clicked
 - 9th May 2021 21:04
 
-- Added JS pseudo code
+Added JS pseudo code
 - 10th May 2021 00:44
 
-- Game is working
+Game is working
 - Some nested functions removed
 - 10th May 2021 21:57
+
+Removed JSHint warnings and Started CSS styling
+- Fixed JS warnings in [JS Hint](https://jshint.com/) version 2.12.0
+- 11th May 2021 18:47

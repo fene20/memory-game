@@ -1,3 +1,6 @@
+/* jshint esversion: 6 */
+/* globals $:false */
+
 // Globals to get the code running
 var playerSequence = [];
 var gameSequence = [];
@@ -15,10 +18,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   console.log("Event: DOM loaded");
   let buttons = document.getElementsByName("box");
+  let boxClicked; // declare boxClicked
+
 
   for (let button of buttons) {
     button.addEventListener("click", function () {
-      if (this.getAttribute("data-type") === "submit") {
+      if (this.getAttribute("data-type") === "start") {
 
         console.log("");
         console.log("Event: clicked start");
@@ -41,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
       } else {
-        let gameType = this.getAttribute("data-type");
 
         console.log("Error");
       }
@@ -106,7 +110,7 @@ function genSqrSequence() {
         uniqueBoxNumber = false;
         console.log("Not Unique!!!!");
       } else {
-        console.log("Unique!!!!")
+        console.log("Unique!!!!");
       }
     }
 
@@ -129,7 +133,6 @@ function genSqrSequence() {
 // Output Square Sequence
 function outputSqrSequence(boxes) {
 
-  let boxId = "";
   let timeMultiplier = 1;
 
   for (let box in boxes) {
@@ -198,7 +201,7 @@ function getPlayerSequence(latestboxClicked) {
     console.log("Count less than level");
 
 
-    updateArray = true;
+    let updateArray = true;
 
     for (let box in playerSequence) {
 
@@ -305,4 +308,4 @@ function updateLevel(correctScore) {
     alert("Game Over");
   }
 
-}
+} 

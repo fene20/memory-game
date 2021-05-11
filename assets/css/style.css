@@ -1,7 +1,115 @@
+/* Credit: Code Institute Tutorial */
+@import url('https://fonts.googleapis.com/css?family=Oswald|Lato:500');
+
+
+
+
+
+/* Credit: Code Institute Tutorial */
+header {
+    font-size: 280%;
+    color: #555555;
+    font-family: Oswald;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    height: 75px;
+}
+
+/* Not picking up colour as part of header above */
+#icon {
+    color: #555555;
+}
+
+header {
+    height: 200px;
+    border-bottom: 1px solid #555555;
+}
+
+header #icon {
+    line-height: 75px;
+    margin-left: 30px;
+    margin-right: 30px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+
+header #memory_game {
+    line-height: 75px;
+    margin-left: 30px;
+}
+
+
+header a, i{
+font-size: 120%;
+}
+
+
+
+
+/* Credit: Code Institute Challenge */
 .box {
     width: 75px;
     height: 75px;
     background-color: green;
     margin: 1rem;
-    display: inline-block;
+    display: inline-block;  
 }
+
+/* Credit: Code Institute Tutorial */
+body {
+    font-family: Lato;
+    color: #555555;
+}
+
+#info_top,
+#info_bottom {
+    margin-left: 30px;
+}
+
+
+/* Credit: Code Institute JS Essentials Project */
+.score_area {
+    margin: 5px auto;
+    width: 60%;
+    font-size: 1.2rem;
+}
+
+/* Credit: Code Institute JS Essentials Project */
+.scores {
+    display: inline-block;
+    padding: 25px;
+}
+
+
+/* @media screen and (max-width: 1396px) { */
+
+@media screen and (max-width: 1000x) {
+
+   
+
+
+    header #memory_game {
+        /* Allows memory_game to wrap around to the left */
+        clear: left;
+        /* Credit: Code Institute Tutorial */
+    }
+
+
+    /* Credit: Code Institute JS Essentials Project */
+    .score_area {
+        width: 100%;
+    }
+
+    /* Credit: Code Institute JS Essentials Project */
+    .scores {
+        margin: 0.5em auto;
+        display: block;
+        padding: 5px;
+    }
+
+}
+
+@media screen and (max-width: 943px) {}
