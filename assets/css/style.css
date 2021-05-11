@@ -1,13 +1,41 @@
 /* Credit: Code Institute Tutorial */
 @import url('https://fonts.googleapis.com/css?family=Oswald|Lato:500');
 
+/* Code Institute Tutorial */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
 
 
+/* ---------------------- body--------------------- */
 
+
+/* Credit: Code Institute Tutorial */
+body {
+    font-family: Lato;
+    color: #777777;
+    /* height: 600;  No height.  */
+}
+
+h2 {
+    font-family: Oswald;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #555555;
+}
+
+
+/* -------------------- header -------------------- */
+
+
+/* Header is at the top the body */
 
 /* Credit: Code Institute Tutorial */
 header {
     font-size: 280%;
+    /* relative to size on device */
     color: #555555;
     font-family: Oswald;
     text-transform: uppercase;
@@ -15,6 +43,7 @@ header {
     font-weight: 600;
     margin-bottom: 0px;
     height: 75px;
+    border-bottom: 1px solid #555555;
 }
 
 /* Not picking up colour as part of header above */
@@ -22,10 +51,7 @@ header {
     color: #555555;
 }
 
-header {
-    height: 200px;
-    border-bottom: 1px solid #555555;
-}
+
 
 header #icon {
     line-height: 75px;
@@ -42,10 +68,35 @@ header #memory_game {
 }
 
 
-header a, i{
-font-size: 120%;
+header a,
+i {
+    font-size: 120%;
+    /* relative to size on device */
 }
 
+
+/* -------------------- info -------------------- */
+
+#info_section {
+    margin-left: 30px;
+    border-bottom: 1px solid #555555;
+    height: 75px;
+}
+
+/* -------------------- level -------------------- */
+
+#level_section {
+    margin-left: 30px;
+    border-bottom: 1px solid #555555;
+    height: 75px;
+}
+
+/* -------------------- boxes -------------------- */
+
+
+#boxes_section {
+    border-bottom: 1px solid #555555;
+}
 
 
 
@@ -55,32 +106,80 @@ font-size: 120%;
     height: 75px;
     background-color: green;
     margin: 1rem;
-    display: inline-block;  
+    display: inline-block;
 }
 
-/* Credit: Code Institute Tutorial */
-body {
-    font-family: Lato;
-    color: #555555;
-}
 
-#info_top,
-#info_bottom {
+/* -------------------- button -------------------- */
+
+
+#button_section {
     margin-left: 30px;
+    border-bottom: 1px solid #555555;
+    height: 75px;
 }
+
+
+/* -------------------- score -------------------- */
+
 
 
 /* Credit: Code Institute JS Essentials Project */
-.score_area {
+.score_section {
     margin: 5px auto;
     width: 60%;
     font-size: 1.2rem;
+    border-bottom: 1px solid #555555;
+    height: 75px;
 }
 
 /* Credit: Code Institute JS Essentials Project */
 .scores {
     display: inline-block;
-    padding: 25px;
+    /*  padding: 25px;   */
+}
+
+
+/* -------------------- debug -------------------- */
+
+
+
+
+/* -------------------- footer -------------------- */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    color: #fafafa;
+    background-color: #555555;
+}
+
+/* Credit: Code Institute Love running  */
+#social_media {
+    text-align: center;
+}
+
+/* Credit: Code Institute Love running  */
+#social_media li {
+    display: inline;
+}
+
+/* Credit: Code Institute Love running  */
+#social_media i {
+    font-size: 150%;
+    margin: 1%;
+    padding: 5%;
+    color: #fafafa;
+    background-color: #555555;
+}
+
+
+
+footer {
+    border-top: 1px solid #555555;
+    border-bottom: 1px solid #555555;
 }
 
 
@@ -88,7 +187,6 @@ body {
 
 @media screen and (max-width: 1000x) {
 
-   
 
 
     header #memory_game {
@@ -99,7 +197,7 @@ body {
 
 
     /* Credit: Code Institute JS Essentials Project */
-    .score_area {
+    .score_section {
         width: 100%;
     }
 

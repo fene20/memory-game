@@ -26,47 +26,58 @@
 
 
 <body>
-    <div id="info_top">
-        <P>Just repeat the box sequence as you see it on the screen</P>
+    <section id="info_section">
+        <P>Just repeat the box sequence as you see it appear on screen</P>
         <button id='button' class="button" data-type="start" name="box">Start</button>
-    </div>
+    </section>
 
-    <div id="level_div">
+    <section id="level_section">
         <p>
             <h2 class="scores">Level: <span id="level">1</span></h2>
         </p>
-    </div>
-    <div id="row_1">
-        <div id="sqr0" class="box" data-type="box" name="box">0</div>
-        <div id="sqr1" class="box" data-type="box" name="box">1</div>
-        <div id="sqr2" class="box" data-type="box" name="box">2</div>
-    </div>
-    <div id="row_2">
-        <div id="sqr3" class="box" data-type="box" name="box">3</div>
-        <div id="sqr4" class="box" data-type="box" name="box">4</div>
-        <div id="sqr5" class="box" data-type="box" name="box">5</div>
-    </div>
-    <div id="row_3">
-        <div id="sqr6" class="box" data-type="box" name="box">6</div>
-        <div id="sqr7" class="box" data-type="box" name="box">7</div>
-        <div id="sqr8" class="box" data-type="box" name="box">8</div>
-    </div>
+    </section>
+    <section id="boxes_section">
+        <div id="row_1">
+            <div id="sqr0" class="box" data-type="box" name="box">0</div>
+            <div id="sqr1" class="box" data-type="box" name="box">1</div>
+            <div id="sqr2" class="box" data-type="box" name="box">2</div>
+        </div>
+        <div id="row_2">
+            <div id="sqr3" class="box" data-type="box" name="box">3</div>
+            <div id="sqr4" class="box" data-type="box" name="box">4</div>
+            <div id="sqr5" class="box" data-type="box" name="box">5</div>
+        </div>
+        <div id="row_3">
+            <div id="sqr6" class="box" data-type="box" name="box">6</div>
+            <div id="sqr7" class="box" data-type="box" name="box">7</div>
+            <div id="sqr8" class="box" data-type="box" name="box">8</div>
+        </div>
+    </section>
 
-    <div id="info_bottom">
+    <section id="button_section">
         <button id="button" class="button" data-type="start" name="box">Next Game</button>
-    </div>
+    </section>
 
-    <div class="score_area">
-        <p class="scores">Correct Answers: <span id="correct">0</span></p>
-        <p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>
-    </div>
+    <section class="score_section">
+        <h2 class="scores">Correct Answers: <span id="correct">0</span></h2>
+        <h2 class="scores">Incorrect Answers: <span id="incorrect">0</span></h2>
+    </section>
 
-    <div class="debug-area">
+    <!--
+    <section class="debug_section">
         <p class="debug">Total Boxes: <span id="totalBoxes">9</span></p>
         <p class="debug">Game Sequence: <span id="game_sequence"></span></p>
         <p class="debug">User Sequence: <span id="user_sequence"></span></p>
-    </div>
+    </section>
+    -->
 
+    <footer>
+        <ul id="social_media">
+            <!-- Free Fontawesome icons -->
+            <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </footer>
     <script src="assets/js_files/script.js"></script>
 </body>
 

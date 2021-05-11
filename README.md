@@ -152,3 +152,7 @@ Game is working
 Removed JSHint warnings and Started CSS styling
 - Fixed JS warnings in [JS Hint](https://jshint.com/) version 2.12.0
 - 11th May 2021 18:47
+
+Updated page section heights
+- 11th May 2021 23:34
+
