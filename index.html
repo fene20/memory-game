@@ -2,21 +2,21 @@
 <html lang="en-US">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memory Game</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
-        integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Memory Game</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+	 crossorigin="anonymous">
 
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
-    <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
+	<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+	<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
 	  crossorigin="anonymous"></script>-->
 </head>
 
 <header>
 
-    <div>
-        <a href="index.html" class="heading" id="icon"><i class="fab fa-buromobelexperte"></i></a>
+	<div>
+		<a href="index.html" class="heading" id="icon"><i class="fab fa-buromobelexperte"></i></a>
     </div>
     <div>
         <h2 class="heading" id="memory_game">Memory Game</h2>
@@ -28,39 +28,40 @@
 <body>
     <section id="info_section">
         <div>
-            <P>Just repeat the box sequence as you see it appear on screen</P>
+            <P>Wait until the boxes change back to green and repeat the red box sequence as you saw it appear on screen.</P>
         </div>
+        <!--
         <div>
             <button id='button' class="button" data-type="start" name="box">Start</button>
         </div>
-
+        -->
     </section>
 
     <section id="level_section">
         <p>
-            <h2 class="scores">Level: <span id="level">1</span></h2>
+            <h2 class="scores">Level: <span id="level">2</span></h2>
         </p>
     </section>
     <section id="boxes_section">
         <div id="row_1">
-            <div id="sqr0" class="box" data-type="box" name="box">0</div>
-            <div id="sqr1" class="box" data-type="box" name="box">1</div>
-            <div id="sqr2" class="box" data-type="box" name="box">2</div>
+            <div id="sqr0" class="box" data-type="box" name="box"></div>
+            <div id="sqr1" class="box" data-type="box" name="box"></div>
+            <div id="sqr2" class="box" data-type="box" name="box"></div>
         </div>
         <div id="row_2">
-            <div id="sqr3" class="box" data-type="box" name="box">3</div>
-            <div id="sqr4" class="box" data-type="box" name="box">4</div>
-            <div id="sqr5" class="box" data-type="box" name="box">5</div>
+            <div id="sqr3" class="box" data-type="box" name="box"></div>
+            <div id="sqr4" class="box" data-type="box" name="box"></div>
+            <div id="sqr5" class="box" data-type="box" name="box"></div>
         </div>
         <div id="row_3">
-            <div id="sqr6" class="box" data-type="box" name="box">6</div>
-            <div id="sqr7" class="box" data-type="box" name="box">7</div>
-            <div id="sqr8" class="box" data-type="box" name="box">8</div>
+            <div id="sqr6" class="box" data-type="box" name="box"></div>
+            <div id="sqr7" class="box" data-type="box" name="box"></div>
+            <div id="sqr8" class="box" data-type="box" name="box"></div>
         </div>
     </section>
 
     <section id="button_section">
-        <button id="button" class="button" data-type="start" name="box">Next Game</button>
+        <button id="button" class="button" data-type="start" name="box">Run Game</button>
     </section>
 
     <section class="score_section">

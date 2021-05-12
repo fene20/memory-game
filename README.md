@@ -158,3 +158,9 @@ Updated page section heights
 
 Style for all devices
 - 12th May 2021 14:22
+
+Removed Top button
+- Finger/hand pressing this button would be blocking boxes.
+- One button (below boxes) is better.
+- Added playerLockOut to force player to wait until game sequence was output.
+- - 12th May 2021 17:05
