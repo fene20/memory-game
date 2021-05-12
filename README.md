@@ -163,4 +163,10 @@ Removed Top button
 - Finger/hand pressing this button would be blocking boxes.
 - One button (below boxes) is better.
 - Added playerLockOut to force player to wait until game sequence was output.
-- - 12th May 2021 17:05
+- 12th May 2021 17:05
+
+Fixed JS, HTML and CSS warnings
+- Ran [JS Hint](https://jshint.com/) version 2.12.0 and fixed warnings.
+- Ran [HTML Validator](https://validator.w3.org/) and fixed warnings.
+- Ran [CSS Validator](https://jigsaw.w3.org/css-validator/) and fixed warnings.
+- 12th May 2021 22:02

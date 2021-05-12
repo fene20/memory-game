@@ -68,9 +68,6 @@ header #memory_game {
     /* margin controlled by icon margin left/right */
 }
 
-
-
-
 /* -------------------- info -------------------- */
 
 #info_section {
@@ -87,9 +84,6 @@ header #memory_game {
     /* Bigger text for iPad's */
 }
 
-#info_section button {
-    height: 25px;
-}
 
 
 
@@ -101,6 +95,7 @@ header #memory_game {
     height: 75px;
     line-height: 75px;
     font-size: 100%;
+    text-align: center;
 }
 
 /* -------------------- boxes -------------------- */
@@ -108,6 +103,7 @@ header #memory_game {
 
 #boxes_section {
     border-bottom: 1px solid #555555;
+    text-align: center;
 }
 
 
@@ -119,7 +115,6 @@ header #memory_game {
     background-color: green;
     margin: 1rem;
     display: inline-block;
-
 }
 
 
@@ -128,12 +123,16 @@ header #memory_game {
 /* -------------------- button -------------------- */
 
 
-#button_section {
+#run_status {
     margin-left: 30px;
     border-bottom: 1px solid #555555;
     height: 75px;
+    text-align: center;
 }
 
+button {
+    background-color: green;
+}
 
 /* -------------------- button class -------------------- */
 
@@ -162,7 +161,7 @@ header #memory_game {
 
 /* Credit: Code Institute JS Essentials Project */
 .scores {
-    display: inline-block;
+  /*  display: inline-block;  */
     /*  padding: 25px;   */
 }
 
@@ -211,12 +210,6 @@ footer {
     background-color: #555555;
 }
 
-
-
-footer {
-    border-top: 1px solid #555555;
-    border-bottom: 1px solid #555555;
-}
 
 
 /* Header text wraps down at a width of 522 so target above that at 600px */
@@ -279,7 +272,7 @@ footer {
     /* -------------------- button max-width: 600px -------------------- */
 
 
-    #button_section {
+    #run_status {
         margin-left: 10px;
         height: 30px;
         line-height: 30px;
@@ -328,7 +321,8 @@ footer {
 @media screen and (max-width: 450px) {
 
     .scores {
-        display: block; /* undo display: inline-block; */
+       /*  display: block;*/
+        /* undo display: inline-block; */
     }
 
 }

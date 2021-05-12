@@ -2,66 +2,55 @@
 <html lang="en-US">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Memory Game</title>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
-	 crossorigin="anonymous">
-
-	<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
-	<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
-	  crossorigin="anonymous"></script>-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+        integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<header>
-
-	<div>
-		<a href="index.html" class="heading" id="icon"><i class="fab fa-buromobelexperte"></i></a>
-    </div>
-    <div>
-        <h2 class="heading" id="memory_game">Memory Game</h2>
-    </div>
-
-</header>
-
-
 <body>
-    <section id="info_section">
-        <div>
-            <P>Wait until the boxes change back to green and repeat the red box sequence as you saw it appear on screen.</P>
-        </div>
-        <!--
-        <div>
-            <button id='button' class="button" data-type="start" name="box">Start</button>
-        </div>
-        -->
-    </section>
 
-    <section id="level_section">
-        <p>
-            <h2 class="scores">Level: <span id="level">2</span></h2>
-        </p>
-    </section>
-    <section id="boxes_section">
+    <header>
+        <div>
+            <a href="index.html" class="heading" id="icon"><i class="fab fa-buromobelexperte"></i></a>
+        </div>
+        <div>
+            <h2 class="heading" id="memory_game">Memory Game</h2>
+        </div>
+    </header>
+
+
+    <div id="info_section">
+            <p>Wait until the boxes change back to green and repeat the red box sequence as you saw it appear on screen.
+            </p>
+    </div>
+
+    <div id="boxes_section">
         <div id="row_1">
-            <div id="sqr0" class="box" data-type="box" name="box"></div>
-            <div id="sqr1" class="box" data-type="box" name="box"></div>
-            <div id="sqr2" class="box" data-type="box" name="box"></div>
+            <div id="sqr0" class="box" data-type="box"></div>
+            <div id="sqr1" class="box" data-type="box"></div>
+            <div id="sqr2" class="box" data-type="box"></div>
         </div>
         <div id="row_2">
-            <div id="sqr3" class="box" data-type="box" name="box"></div>
-            <div id="sqr4" class="box" data-type="box" name="box"></div>
-            <div id="sqr5" class="box" data-type="box" name="box"></div>
+            <div id="sqr3" class="box" data-type="box"></div>
+            <div id="sqr4" class="box" data-type="box"></div>
+            <div id="sqr5" class="box" data-type="box"></div>
         </div>
         <div id="row_3">
-            <div id="sqr6" class="box" data-type="box" name="box"></div>
-            <div id="sqr7" class="box" data-type="box" name="box"></div>
-            <div id="sqr8" class="box" data-type="box" name="box"></div>
+            <div id="sqr6" class="box" data-type="box"></div>
+            <div id="sqr7" class="box" data-type="box"></div>
+            <div id="sqr8" class="box" data-type="box"></div>
         </div>
-    </section>
+    </div>
 
-    <section id="button_section">
-        <button id="button" class="button" data-type="start" name="box">Run Game</button>
+    <div id="run_status">
+        <button id="button" class="button" data-type="start">Run Game</button>
+    </div>
+
+    <section id="level_section">
+        <h2 class="scores">Level: <span id="level">2</span></h2>
     </section>
 
     <section class="score_section">
@@ -69,13 +58,7 @@
         <h2 class="scores">Incorrect Answers: <span id="incorrect">0</span></h2>
     </section>
 
-    <!--
-    <section class="debug_section">
-        <p class="debug">Total Boxes: <span id="totalBoxes">9</span></p>
-        <p class="debug">Game Sequence: <span id="game_sequence"></span></p>
-        <p class="debug">User Sequence: <span id="user_sequence"></span></p>
-    </section>
-    -->
+
 
     <footer>
         <ul id="social_media">
