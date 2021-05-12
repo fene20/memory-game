@@ -64,15 +64,11 @@ header #icon {
 
 header #memory_game {
     line-height: 75px;
-    margin-left: 30px;
+    margin-left: 0px;
+    /* margin controlled by icon margin left/right */
 }
 
 
-header a,
-i {
-    font-size: 120%;
-    /* relative to size on device */
-}
 
 
 /* -------------------- info -------------------- */
@@ -81,7 +77,21 @@ i {
     margin-left: 30px;
     border-bottom: 1px solid #555555;
     height: 75px;
+    clear: left;
+    /* Clear alignment with the left of the heading above, i.e. to the right of the Icon */
 }
+
+#info_section p {
+    height: 50px;
+    font-size: 150%;
+    /* Bigger text for iPad's */
+}
+
+#info_section button {
+    height: 25px;
+}
+
+
 
 /* -------------------- level -------------------- */
 
@@ -89,6 +99,8 @@ i {
     margin-left: 30px;
     border-bottom: 1px solid #555555;
     height: 75px;
+    line-height: 75px;
+    font-size: 100%;
 }
 
 /* -------------------- boxes -------------------- */
@@ -107,7 +119,10 @@ i {
     background-color: green;
     margin: 1rem;
     display: inline-block;
+
 }
+
+
 
 
 /* -------------------- button -------------------- */
@@ -120,6 +135,16 @@ i {
 }
 
 
+/* -------------------- button class -------------------- */
+
+
+.button {
+    font-size: 150%;
+    /* Bigger text for iPad's */
+}
+
+
+
 /* -------------------- score -------------------- */
 
 
@@ -127,10 +152,12 @@ i {
 /* Credit: Code Institute JS Essentials Project */
 .score_section {
     margin: 5px auto;
-    width: 60%;
-    font-size: 1.2rem;
+    width: 100%;
+    font-size: 100%;
     border-bottom: 1px solid #555555;
     height: 75px;
+    line-height: 75px;
+    text-align: center;
 }
 
 /* Credit: Code Institute JS Essentials Project */
@@ -138,6 +165,15 @@ i {
     display: inline-block;
     /*  padding: 25px;   */
 }
+
+/* -------------------- level and score -------------------- */
+
+#level,
+#correct,
+#incorrect {
+    color: red;
+}
+
 
 
 /* -------------------- debug -------------------- */
@@ -151,7 +187,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 150px;
+    height: 30px;
     color: #fafafa;
     background-color: #555555;
 }
@@ -163,7 +199,7 @@ footer {
 
 /* Credit: Code Institute Love running  */
 #social_media li {
-    display: inline;
+    display: inline-block;
 }
 
 /* Credit: Code Institute Love running  */
@@ -183,31 +219,130 @@ footer {
 }
 
 
-/* @media screen and (max-width: 1396px) { */
+/* Header text wraps down at a width of 522 so target above that at 600px */
 
-@media screen and (max-width: 1000x) {
+@media screen and (max-width: 600px) {
 
 
+    /* -------------------- header max-width: 600px -------------------- */
+
+
+    header #icon {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 
     header #memory_game {
-        /* Allows memory_game to wrap around to the left */
-        clear: left;
-        /* Credit: Code Institute Tutorial */
+        font-size: 70%;
+        margin-left: 10px;
     }
+
+
+    /* -------------------- info max-width: 600px -------------------- */
+
+    #info_section {
+        margin-left: 10px;
+        height: 60px;
+    }
+
+    #info_section p {
+        height: 40px;
+        font-size: 100%;
+    }
+
+    #info_section button {
+        height: 20px;
+    }
+
+
+
+
+    /* -------------------- level max-width: 600px -------------------- */
+
+    #level_section {
+        margin-left: 10px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 50%;
+    }
+
+    /* -------------------- boxes max-width: 600px -------------------- */
+
+
+    /* Credit: Code Institute Challenge */
+    .box {
+        width: 50px;
+        height: 50px;
+    }
+
+
+    /* -------------------- button max-width: 600px -------------------- */
+
+
+    #button_section {
+        margin-left: 10px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+
+    /* -------------------- button class max-width: 600px -------------------- */
+
+
+    .button {
+        font-size: 100%;
+        /* Bigger text for iPad's */
+    }
+
+
+    /* -------------------- score max-width: 600px -------------------- */
+
 
 
     /* Credit: Code Institute JS Essentials Project */
     .score_section {
-        width: 100%;
+        height: 20px;
+        line-height: 20px;
+        font-size: 50%;
+        /* wraps onto two lines for iPhone 5/SE - that's ok */
     }
 
-    /* Credit: Code Institute JS Essentials Project */
-    .scores {
-        margin: 0.5em auto;
-        display: block;
-        padding: 5px;
+
+    /* -------------------- footer max-width: 600px -------------------- */
+
+    footer {
+        height: 20px;
+    }
+
+
+    #social_media i {
+        font-size: 100%;
     }
 
 }
 
-@media screen and (max-width: 943px) {}
+
+
+/* iPhone 6/7/8 plus width 414 */
+/* Score across full screen so tidy up at 450px by "wrapping around" */
+@media screen and (max-width: 450px) {
+
+    .scores {
+        display: block; /* undo display: inline-block; */
+    }
+
+}
+
+
+/* Galaxy Fold width 280 */
+/* Header text wraps down again at a width of 282 so target above that at 300px */
+@media screen and (max-width: 300px) {
+
+
+    /* -------------------- header max-width: 300px -------------------- */
+
+    header #memory_game {
+        font-size: 60%;
+    }
+
+}

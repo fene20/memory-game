@@ -156,3 +156,5 @@ Removed JSHint warnings and Started CSS styling
 Updated page section heights
 - 11th May 2021 23:34
 
+Style for all devices
+- 12th May 2021 14:22
