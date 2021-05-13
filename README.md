@@ -100,6 +100,7 @@ Added scores to HTML from Code Institute JavaScript Walkthrough Project.
 - Scores from CodeInstitute JS Essentials Project
 
 ### Challenges
+
 - It took a while to figure out how to use setTimeout as a sequential delay.
 - Initially all squares were updating at the same time but all a fixed delay later.
 - The JS code runs on and cannot be paused but an output can be paused.
@@ -108,7 +109,10 @@ Added scores to HTML from Code Institute JavaScript Walkthrough Project.
 - [GeeksforGeeks](https://www.geeksforgeeks.org/how-to-add-a-delay-in-a-javascript-loop/)
 - Also got caught here using strings in mathematical calculations.
 
-
+- The events were modified to remove JSHint warnings.
+- It took a while to figure out the how to capture the actual box that was clicked inside the boxes_section.
+- The answer was event.target.getAttribute("id").
+- Credit JS essentials project which had this line this.getAttribute("data-type")
 
 ### Revision History
 
@@ -170,3 +174,6 @@ Fixed JS, HTML and CSS warnings
 - Ran [HTML Validator](https://validator.w3.org/) and fixed warnings.
 - Ran [CSS Validator](https://jigsaw.w3.org/css-validator/) and fixed warnings.
 - 12th May 2021 22:02
+
+Centered all contents on page
+- 13th May 2021 22:56

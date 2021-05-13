@@ -13,19 +13,30 @@
 <body>
 
     <header>
-        <div>
-            <a href="index.html" class="heading" id="icon"><i class="fab fa-buromobelexperte"></i></a>
-        </div>
-        <div>
-            <h2 class="heading" id="memory_game">Memory Game</h2>
+        <div id="header_row">
+            <div id="icon_row">
+                <a href="index.html" class="heading" id="icon"><i class="fab fa-buromobelexperte"></i></a>
+            </div>
+            <div id="heading_text">
+                <h2 class="heading" id="memory_game">Memory Game</h2>
+            </div>
         </div>
     </header>
 
+    <section id="level_section">
+        <div id="level_area">
+            <h2 class="scores">Level: <span id="level">1</span></h2>
+        </div>
+    </section>
 
-    <div id="info_section">
-            <p>Wait until the boxes change back to green and repeat the red box sequence as you saw it appear on screen.
-            </p>
-    </div>
+    <section id="score_section">
+        <div id="correct_answer">
+            <h2 class="scores">Correct Answers: <span id="correct">0</span></h2>
+        </div>
+        <div id="incorrect_answer">
+            <h2 class="scores">Incorrect Answers: <span id="incorrect">0</span></h2>
+        </div>
+    </section>
 
     <div id="boxes_section">
         <div id="row_1">
@@ -49,16 +60,22 @@
         <button id="button" class="button" data-type="start">Run Game</button>
     </div>
 
-    <section id="level_section">
-        <h2 class="scores">Level: <span id="level">2</span></h2>
+    <section id="info_section">
+        <h2>Instructions</h2>
+        <p>Hit the Run Game Button.
+        </p>
+        <p>Watch the boxes flash red.
+        </p>
+        <p>Wait until the boxes change back to green.
+        </p>
+        <p>Repeat the sequence as you saw it appear on screen.
+        </p>
+        <!-- Empty Paragraph to allow the last instruction to scroll up above the footer-->
+        <p>
+        </p>
+        <p>
+        </p>
     </section>
-
-    <section class="score_section">
-        <h2 class="scores">Correct Answers: <span id="correct">0</span></h2>
-        <h2 class="scores">Incorrect Answers: <span id="incorrect">0</span></h2>
-    </section>
-
-
 
     <footer>
         <ul id="social_media">
