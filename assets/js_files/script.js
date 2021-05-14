@@ -1,6 +1,7 @@
 // jshint esversion: 6 
 // globals $:false 
 
+
 // Globals
 var playerSequence_global = [];
 var gameSequence_global = [];
@@ -14,6 +15,7 @@ var debug_global = true;
 // runGameSequence() which is called when the Start button is pressed/clicked.
 // getPlayerSequence() which is called every time a box is pressed/clicked.
 // When the getPlayerSequence() function is called ${level} times the scores get updated and the level is updated.
+
 
 var runButtonClick = function () {
 
@@ -93,6 +95,24 @@ function runGameSequence() {
 
 // Generate Square Sequence
 function genSqrSequence() {
+
+    // The runGameSequence is like a master while the getPlayerSequence is like a slave.
+    // The boxes cannot be clicked while the runGameSequence is running.
+    // However the player can hit multiple game starts. This could be prevented with another
+    // lockOut but the code may no longer be robust. Easy solution is to let the user run multiple atarts and
+    // get an incorrect answer. The code below will change the squares back to red however.
+    // Repeating the last button sequence to flash will give a correct score.
+
+    // Turn all boxes green.
+    for (let i = 0; i < totalNoBoxes_global; i++) {
+        idOff = "sqr" + i;
+        document.getElementById(idOff).style.backgroundColor = "green"; // Clear colours back to green
+
+        if (debug_global === true)
+            console.log(`clear box ${idOff} at start`);
+    }
+
+
 
     // Credit CodeInstitute JS Essentials Project
     let level = parseInt(document.getElementById("level").innerText);
@@ -194,8 +214,11 @@ function sqrOutDelay(timeIndex, boxId) {
 
         if ((boxId === "sqrOffWithButtonOrange") || (boxId === "sqrOffWithButtonGreen")) {
 
-            if (debug_global === true)
+            if (debug_global === true) {
+                console.log("");
                 console.log("Turn Squares Off");
+            }
+
 
             // Easy solution, just turn all boxes green.
             for (let i = 0; i < totalNoBoxes_global; i++) {
@@ -255,7 +278,6 @@ function getPlayerSequence(latestboxClicked) {
 
 
     // Will allow the player to make the mistake of pressing the same box as they may have pressed earlier.
-
 
 
     // Prevent the recording of clicks when the array size is greater than the game level (+ 1 for the "test" string )
@@ -376,7 +398,7 @@ function updateLevel(correctScore) {
 
     //let totalNoBoxes = parseInt(document.getElementById("totalBoxes").innerText);
     let level = parseInt(document.getElementById("level").innerText);
-    let scoreAtLevel = 3; // 3 for debug
+    let scoreAtLevel = 2; // 3 for debug
     let nextLevel = 1;
 
     nextLevel = correctScore / scoreAtLevel;
@@ -391,13 +413,12 @@ function updateLevel(correctScore) {
         document.getElementById("level").innerText = ++level;
     }
 
- //   if (level > totalNoBoxes_global) {
-     if (level > 2) {   
-        document.getElementById("game_over").innerHTML =
-            `<div style="position: absolute; top: 100px; z-index: 3;">
-                <h3>Game Over</h3>
-                <h2>Congratulations on finishing the game</h2>
-            </div>`;
+    if (level > totalNoBoxes_global) {
+
+        Swal.fire(
+            'Game Over',
+            'Congratulations on finishing the game!',
+        );
     }
 
 }

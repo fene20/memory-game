@@ -99,6 +99,7 @@ Added scores to HTML from Code Institute JavaScript Walkthrough Project.
 - Got timeout help from [GeeksforGeeks](https://www.geeksforgeeks.org/how-to-add-a-delay-in-a-javascript-loop/)
 - Scores from CodeInstitute JS Essentials Project.
 - Text overlay from [stackoverflow](https://stackoverflow.com/questions/21395662/overlay-div-on-image)
+- Game over pop up [sweetAlert2](https://sweetalert2.github.io/)
 
 ### Challenges
 
@@ -187,3 +188,9 @@ Added dummy_footer to HTML
 - Ran [JS Hint](https://jshint.com/) version 2.12.0 and fixed warnings.
 - Ran [HTML Validator](https://validator.w3.org/) and fixed warnings.
 - Ran [CSS Validator](https://jigsaw.w3.org/css-validator/) and fixed warnings.
+- 14th May 2021 15:49
+
+
+Added sweetAlert2 pop up
+- Replaced Overlay with [sweetAlert2](https://sweetalert2.github.io/) pop up on Game Over.
+- 14th May 2021 23:13

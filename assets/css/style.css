@@ -45,7 +45,8 @@ header {
     letter-spacing: 4px;
     font-weight: 600;
     text-align: center;
-    background-color: #ffaaaa;
+    border-bottom: 1px solid #555555;
+    margin-bottom: 40px;
 }
 
 header #icon_row,
@@ -75,7 +76,6 @@ header h2 {
     line-height: 40px;
     font-size: 100%;
     text-align: center;
-    background-color: #ffaaff;
 }
 
 
@@ -96,7 +96,6 @@ header h2 {
     height: 40px;
     line-height: 40px;
     text-align: center;
-    background-color: #ffaaaa;
 }
 
 #incorrect_answer {
@@ -106,7 +105,6 @@ header h2 {
     height: 40px;
     line-height: 40px;
     text-align: center;
-    background-color: #ffaaff;
 }
 
 
@@ -127,8 +125,8 @@ header h2 {
 
 #boxes_section {
     text-align: center;
-    background-color: #ffaaaa;
-    /* Credit Code Institute Love Running */
+    margin-top: 20px;
+    margin-bottom: 20px;
 
 }
 
@@ -144,46 +142,12 @@ header h2 {
 }
 
 
-/* -------------------- Game Over  -------------------- */
-
-/* Credit https://stackoverflow.com/ */
-
-#game_over {
-    position: relative;
-    z-index: 1;
-    /*  margin-top: 10px;*/
-    text-transform: uppercase;
-    text-align: center;
-    height: 0px;
-    width: 320px;
-}
-
-
-#game_over h3,
-h2 {
-    height: 40px;
-    line-height: 40px;
-    background-color: #fafafa;
-}
-
-#game_over h3 {
-    font-size: 180%;
-    background-color: #fafafa;
-}
-
-#game_over h2 {
-    font-size: 120%;
-    background-color: #fafafa;
-}
-
-
 /* -------------------- button -------------------- */
 
 
 #run_status {
     height: 40px;
     text-align: center;
-    background-color: #ffaaff;
 }
 
 button {
@@ -193,7 +157,6 @@ button {
     padding-right: 10px;
 }
 
-/* -------------------- button class -------------------- */
 
 
 .button {
@@ -206,13 +169,29 @@ button {
 
 /* -------------------- info -------------------- */
 
+#info_section {
+    margin-top: 40px;
+    text-align: center;
+}
 
-#info_section h2,
-p {
+#info_section div {
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto;
+    /* 0 top bottom, auto other 2. */
+}
+
+#info_section p {
     height: 40px;
     font-size: 150%;
     text-align: center;
-    background-color: #ffaaaa;
+}
+
+#info_section h2 {
+    height: 40px;
+    font-size: 150%;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 
@@ -234,34 +213,37 @@ footer {
     height: 30px;
     color: #fafafa;
     background-color: #555555;
+    padding: 10px;
 }
 
-/* Credit: Code Institute Love running  */
+
 #social_media {
     text-align: center;
 }
 
-/* Credit: Code Institute Love running  */
 #social_media li {
     display: inline-block;
-}
-
-/* Credit: Code Institute Love running  */
-#social_media i {
-    font-size: 150%;
-    margin: 1%;
-    padding: 10%;
-    color: #fafafa;
-    background-color: #555555;
-}
-
-#social_media li p {
     font-size: 150%;
 }
 
-.fa-copyright {
+#copy {
     margin-left: 30px;
 }
+
+
+
+#social_media i {
+    color: #fafafa;
+    background-color: #555555;
+    font-size: 80%;
+}
+
+.fab {
+    margin-left: 4px;
+}
+
+
+
 
 
 /* Header text wraps down at a width of 477 so target above that at 600px */
@@ -330,20 +312,20 @@ footer {
     /* -------------------- button max-width: 600px -------------------- */
 
 
-    #run_status {
-        height: 20px;
-        line-height: 20px;
-        font-size: 50%;
-    }
+
+button {
+    background-color: grey;
+    border: 4px solid grey;
+    padding-left: 5px;
+    padding-right: 5px;
+}
 
 
-    /* -------------------- button class max-width: 600px -------------------- */
 
-
-    .button {
-        font-size: 100%;
-        /* Bigger text for iPad's */
-    }
+.button {
+    font-size: 120%;
+    /* Bigger text for iPad's */
+}
 
 
 
@@ -367,17 +349,25 @@ footer {
 
     /* -------------------- footer max-width: 600px -------------------- */
 
+
     footer {
         height: 20px;
+        padding: 5px;
+        padding-bottom: 10px;
+    }
+
+
+    #social_media li {
+        font-size: 140%;
     }
 
 
     #social_media i {
-        font-size: 100%;
+        font-size: 80%;
     }
 
-    #social_media li p {
-        font-size: 100%;
+    #copy {
+        margin-left: 20px;
     }
 
 }
@@ -394,6 +384,10 @@ footer {
 
     header #memory_game {
         font-size: 60%;
+    }
+
+    #copy {
+        margin-left: 15px;
     }
 
 }
