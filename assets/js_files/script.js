@@ -7,8 +7,8 @@ var gameSequence_global = [];
 var totalNoBoxes_global = 9;
 
 // A player can click buttons as they flash on screen, i.e. cheat, so need to lock this out.
-var playerLockOut_global = false;
-var debug_global = false;
+var playerLockOut_global = true; // true - player cannot change color before the game starts.
+var debug_global = true;
 
 // This script has 2 significant function calls
 // runGameSequence() which is called when the Start button is pressed/clicked.
@@ -44,11 +44,7 @@ var boxesClick = function () {
 
                 getPlayerSequence(event.target.getAttribute("id"));
 
-                if (event.target.backgroundColor === "orange") {
-                    event.target.style.backgroundColor = "green";
-                } else {
-                    event.target.style.backgroundColor = "orange";
-                }
+                event.target.style.backgroundColor = "orange";
 
             } else {
                 if (debug_global === true)
@@ -395,8 +391,13 @@ function updateLevel(correctScore) {
         document.getElementById("level").innerText = ++level;
     }
 
-    if (level > totalNoBoxes_global) {
-        alert("Congratulations you've finished the Memory Game !!!!");
+ //   if (level > totalNoBoxes_global) {
+     if (level > 2) {   
+        document.getElementById("game_over").innerHTML =
+            `<div style="position: absolute; top: 100px; z-index: 3;">
+                <h3>Game Over</h3>
+                <h2>Congratulations on finishing the game</h2>
+            </div>`;
     }
 
 }

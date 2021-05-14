@@ -15,6 +15,7 @@
     <header>
         <div id="header_row">
             <div id="icon_row">
+                <!-- Reloads page -->
                 <a href="index.html" class="heading" id="icon"><i class="fab fa-buromobelexperte"></i></a>
             </div>
             <div id="heading_text">
@@ -39,6 +40,17 @@
     </section>
 
     <div id="boxes_section">
+
+        <div id="game_over">
+            <!-- JS inserts HTML here -->
+            <!-- Credit https://stackoverflow.com/ -->
+            <!-- JS inserts HTML as seen below -->
+            <!--  <div style="position: absolute; top: 100px; z-index: 3;">
+                <h3>Game Over</h3>
+                <h2>Congratulations on finishing the game</h2>
+            </div> -->
+        </div>
+
         <div id="row_1">
             <div id="sqr0" class="box" data-type="box"></div>
             <div id="sqr1" class="box" data-type="box"></div>
@@ -56,6 +68,7 @@
         </div>
     </div>
 
+
     <div id="run_status">
         <button id="button" class="button" data-type="start">Run Game</button>
     </div>
@@ -70,18 +83,18 @@
         </p>
         <p>Repeat the sequence as you saw it appear on screen.
         </p>
-        <!-- Empty Paragraph to allow the last instruction to scroll up above the footer-->
-        <p>
-        </p>
-        <p>
-        </p>
     </section>
+
+    <div id="dummy_footer">
+    </div>
 
     <footer>
         <ul id="social_media">
             <!-- Free Fontawesome icons -->
             <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
             <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><i id="copy" class="far fa-copyright"></i></li>
+            <li><p> fene20 2021</p></li>
         </ul>
     </footer>
     <script src="assets/js_files/script.js"></script>

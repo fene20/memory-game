@@ -19,12 +19,15 @@ body {
     background-color: #fafafa;
 }
 
-h2 {
+h2,
+h3 {
     font-family: Oswald;
     text-transform: uppercase;
     letter-spacing: 4px;
     color: #555555;
+
 }
+
 
 
 /* -------------------- header -------------------- */
@@ -57,7 +60,10 @@ header i {
     color: #555555;
 }
 
-
+header h2 {
+    height: 75px;
+    line-height: 75px;
+}
 
 
 
@@ -77,7 +83,10 @@ header i {
 
 /* -------------------- score -------------------- */
 
-
+#score_section {
+    height: 80px;
+    line-height: 80px;
+}
 
 /* Credit: Code Institute JS Essentials Project */
 #correct_answer {
@@ -119,6 +128,8 @@ header i {
 #boxes_section {
     text-align: center;
     background-color: #ffaaaa;
+    /* Credit Code Institute Love Running */
+
 }
 
 
@@ -133,6 +144,37 @@ header i {
 }
 
 
+/* -------------------- Game Over  -------------------- */
+
+/* Credit https://stackoverflow.com/ */
+
+#game_over {
+    position: relative;
+    z-index: 1;
+    /*  margin-top: 10px;*/
+    text-transform: uppercase;
+    text-align: center;
+    height: 0px;
+    width: 320px;
+}
+
+
+#game_over h3,
+h2 {
+    height: 40px;
+    line-height: 40px;
+    background-color: #fafafa;
+}
+
+#game_over h3 {
+    font-size: 180%;
+    background-color: #fafafa;
+}
+
+#game_over h2 {
+    font-size: 120%;
+    background-color: #fafafa;
+}
 
 
 /* -------------------- button -------------------- */
@@ -165,11 +207,20 @@ button {
 /* -------------------- info -------------------- */
 
 
-#info_section h2, p {
+#info_section h2,
+p {
     height: 40px;
     font-size: 150%;
     text-align: center;
     background-color: #ffaaaa;
+}
+
+
+/* -------------------- dummy footer -------------------- */
+
+#dummy_footer {
+    height: 40px;
+    /* Prevent text from being hidden behind footer, extra 10px. */
 }
 
 
@@ -199,11 +250,18 @@ footer {
 #social_media i {
     font-size: 150%;
     margin: 1%;
-    padding: 5%;
+    padding: 10%;
     color: #fafafa;
     background-color: #555555;
 }
 
+#social_media li p {
+    font-size: 150%;
+}
+
+.fa-copyright {
+    margin-left: 30px;
+}
 
 
 /* Header text wraps down at a width of 477 so target above that at 600px */
@@ -213,7 +271,7 @@ footer {
 
     /* -------------------- header max-width: 600px -------------------- */
 
-  
+
 
     header #memory_game {
         font-size: 70%;
@@ -232,7 +290,10 @@ footer {
 
     /* -------------------- score max-width: 600px -------------------- */
 
-
+    #score_section {
+        height: 40px;
+        line-height: 40px;
+    }
 
     /* Credit: Code Institute JS Essentials Project */
     #correct_answer,
@@ -250,6 +311,19 @@ footer {
     .box {
         width: 50px;
         height: 50px;
+    }
+
+
+
+    /* -------------------- Game Over max-width: 600px -------------------- */
+
+    /* Credit https://stackoverflow.com/ */
+
+    #game_over {
+        width: 180px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 50%;
     }
 
 
@@ -283,7 +357,11 @@ footer {
     }
 
 
+    /* -------------------- dummy footer max-width: 600px -------------------- */
 
+    #dummy_footer {
+        height: 30px;
+    }
 
 
 
@@ -295,6 +373,10 @@ footer {
 
 
     #social_media i {
+        font-size: 100%;
+    }
+
+    #social_media li p {
         font-size: 100%;
     }
 

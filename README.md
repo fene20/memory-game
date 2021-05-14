@@ -97,7 +97,8 @@ Added scores to HTML from Code Institute JavaScript Walkthrough Project.
 - I received inspiration for this project from X . . . . 
 - The first commit was a direct 100% copy of Code Institute 54_JavaScript_HDE_Working_With_Functions Challenge
 - Got timeout help from [GeeksforGeeks](https://www.geeksforgeeks.org/how-to-add-a-delay-in-a-javascript-loop/)
-- Scores from CodeInstitute JS Essentials Project
+- Scores from CodeInstitute JS Essentials Project.
+- Text overlay from [stackoverflow](https://stackoverflow.com/questions/21395662/overlay-div-on-image)
 
 ### Challenges
 
@@ -177,3 +178,12 @@ Fixed JS, HTML and CSS warnings
 
 Centered all contents on page
 - 13th May 2021 22:56
+
+Added dummy_footer to HTML
+- Changed playerLockOut_global = true on program load.
+- Removed square toggle which was copied from Code Institute JS Walkthrough project.
+- Deleted box.js and game.js
+- Added Game Over to JS.
+- Ran [JS Hint](https://jshint.com/) version 2.12.0 and fixed warnings.
+- Ran [HTML Validator](https://validator.w3.org/) and fixed warnings.
+- Ran [CSS Validator](https://jigsaw.w3.org/css-validator/) and fixed warnings.
