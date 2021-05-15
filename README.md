@@ -66,20 +66,25 @@ Users expect clear visual interaction.
 - The game boxes were configured as reg, green and orange. Three clear colours.
 - The other colours on the page are not used during the game and are not as strong.
 
+
 The game must be robust against children pressing boxes at the wrong time.
 - The game has two major events:
 1/ Pressing the Run Game button which generates the game sequence.
 2/ Pressing the boxes to enter the player sequence.
 - The player sequence could not run before the game sequence. A Lock Out was added to the code so that when the game sequence was run it prevented the user from entering the player sequence until the code was ready, i.e. until after the game sequence of squares had been output.
 
+
 Unnecessary game noise can be annoying in a household and distracting in e.g. a car. So to support the game use in these situations it must be quiet.
 - Audio feedback was purposefully not added to the game.
+
 
 The primary device that a child will have access to is an iPad.
 - The Game was designed to look OK on an iPad.
 
+
 The secondary device that a child will have access to is a mobile phone.
 - The Game was designed to look OK on all the mobile phones on google - inspect.
+
 
 The player will want some game feedback to stay engaged with the game.
 - The scores section gives the user feedback on the game progress.
@@ -87,6 +92,7 @@ The player will want some game feedback to stay engaged with the game.
 - When the run game button is pressed the button border changes to red. This matches the colour of the game box sequence.
 - When the game is ready for the player to select their boxes the button border changes to orange. This matches the colour of the player box sequence.
 - When a game-player sequence has been run the button border changes back to grey, i.e. the button colour.
+
 
 Children like games with nice visual effects.
 - The colours red, green and yellow were tried out but were changed to red, green and orange as yellow was too bright.
@@ -99,20 +105,25 @@ Children like games with nice visual effects.
 - The game was trialled with a game sequence with two seconds between each red box output. This was too slow and was speeded up to 1 second between each box.
 - Each box that turns red in the game sequence stays on while the next box is changed to red. So at the end of the sequence all boxes that were in the sequence are red. This gives the player (a child) a better chance or remembering the sequence than if the boxes were flashed to the screen one at a time.
 
+
 The game must not appear too educational for the player.
 - The boxes were not given letters, numbers or images with cats and dogs etc. which may make the game look to much like something from school.
+
 
 The player must understand how to play the game.
 - A set of instructions has been included to explain how the game works.
 - The border of the run game button changes colour to match the colour being output and the colour being input. This gives the player feedback on where they are in the game sequence.
 
+
 Initial Game [Wireframe](assets/wireframes/memory_game.pdf).
 - The initial wireframe had the start button at the top. This may have looked nice on the wireframe but would not have been a good UX above the boxes where player fingers would have obscured the nine boxes.
 - The initial wireframe had the instructions above the game box area. The instructions may work there (with level/scores, box area and button next) but once read then repeat players would not read the instructions again so a better UX was to place them near the end of the page.
- - The initial wireframe had a 2 X 4 box layout. This does not look well on an iPad or mobile. This layout was changed to a 3 x 3 box layout for a better UX.
+- The initial wireframe had a 2 X 4 box layout. This does not look well on an iPad or mobile. This layout was changed to a 3 x 3 box layout for a better UX.
 - The initial scores section was below the boxes but this would not have been good UX as the players fingers would have obscured the scores. It's a better UX with the scores above the boxes.
 
+
 [IPad](assets/validation/iPad_Google_inspect.jpg) implementation as seen on Google Inspect.
+
 [IPhone5/SE](assets/validation/iPhone5SE_Google_inspect.jpg) implementation as seen on Google Inspect.
 
 ## Testing
@@ -293,3 +304,6 @@ Commit README changes
 
 Commit README changes
 - 16th May 2021 00:18
+
+Commit README changes
+- 16th May 2021 00:28
