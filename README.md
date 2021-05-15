@@ -25,21 +25,20 @@ Initial Game [Wireframe](assets/wireframes/memory_game.pdf).
 - The Run Game button is under the game boxes area. The border colour of the button changes to match where the player is in the game run. Hitting the Run Game button calls the JS function runGameSequence.
 - During a game the player will just want to see the level/scores, the nine boxes and the Run Game button.
 - The instructions are laid out under the Run Game button. After the instructions are read it will not matter if the players fingers are on the Run Game button, i.e. blocking the instructions.
-- The footer is locked to the bottom of the page. It is narrow. A dummy_footer div was added to allow the full page to scroll above the footer.
+- The footer is locked to the bottom of the page. It is narrow and does not block the page significantly. A dummy_footer div was added to allow the full page to scroll above the footer.
 
 ### Features Left to Implement
 - The JS code could be implemented with a while loop so that the player does not need to hit Run Game button for each sequence. The button could easily be added or removed from the page with JS code. Perhaps instead the Run Game button could be replaced with a pause button by JS code so that the player can halt the game during a run.
 - Perhaps Audio could be added with a button to turn off the audio. Or just use the volume control. Parents might be happier with no audio at all though.
 
 ## Technologies Used
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
 - [Balsamiq Wireframes](https://balsamiq.com/wireframes/desktop/)
     - This project used **Balsamiq Wireframes** to generate the wireframe for this project.
 
 - [Fontawesome Icons](https://fontawesome.com/)
     - This project used free **Fontawesome** icons.
-    - The icons used were, the buromobelexperte, facebook, instagram and copyright icons.
+    - The icons used were the buromobelexperte, facebook, instagram and copyright icons.
 
 - [W3C Markup Validation Service](https://validator.w3.org/)
     - This project used the **JS W3C Markup Validation Service** to check for warnings/errors.
@@ -71,7 +70,7 @@ The game must be robust against children pressing boxes at the wrong time.
 - The game has two major events:
 1/ Pressing the Run Game button which generates the game sequence.
 2/ Pressing the boxes to enter the player sequence.
-- The player sequence could not run before the game sequence. A Lock Out was added to the code so that when the game sequence was run it prevented the user from entering the player sequence until the code was ready - the game sequence of squares had been output.
+- The player sequence could not run before the game sequence. A Lock Out was added to the code so that when the game sequence was run it prevented the user from entering the player sequence until the code was ready, i.e. until after the game sequence of squares had been output.
 
 Unnecessary game noise can be annoying in a household and distracting in e.g. a car. So to support the game use in these situations it must be quiet.
 - Audio feedback was purposefully not added to the game.
@@ -98,22 +97,23 @@ Children like games with nice visual effects.
 - The run game button is below the boxes so that a players finger (on the button) will not obscure the game.
 - The scores are above the boxes and will not be obscured by fingers pressing the button or the boxes.
 - The game was trialled with a game sequence with two seconds between each red box output. This was too slow and was speeded up to 1 second between each box.
-- Each box that turns red in the game sequence stays on while the next box is changed to red. So at the end of the sequence all boxes that were in the sequence stay red. This gives the player (a child) a better chance or remembering the sequence than if the boxes were flashed to the screen.
+- Each box that turns red in the game sequence stays on while the next box is changed to red. So at the end of the sequence all boxes that were in the sequence are red. This gives the player (a child) a better chance or remembering the sequence than if the boxes were flashed to the screen one at a time.
 
 The game must not appear too educational for the player.
-- The boxes were not given letters, numbers or images with cats and dogs etc which may make the game look to much like something from school.
+- The boxes were not given letters, numbers or images with cats and dogs etc. which may make the game look to much like something from school.
 
 The player must understand how to play the game.
 - A set of instructions has been included to explain how the game works.
-- The border of the run game button changes colour to match the colour being output and being input. This gives the player feedback on where they are in the game sequence.
+- The border of the run game button changes colour to match the colour being output and the colour being input. This gives the player feedback on where they are in the game sequence.
 
 Initial Game [Wireframe](assets/wireframes/memory_game.pdf).
 - The initial wireframe had the start button at the top. This may have looked nice on the wireframe but would not have been a good UX above the boxes where player fingers would have obscured the nine boxes.
-- The initial wireframe had the instructions above the game box area. The instructions may work there (with level/scores, box area and button next) but once read repeat players would not read the instructions again so a better UX was to place them near the end of the page.
+- The initial wireframe had the instructions above the game box area. The instructions may work there (with level/scores, box area and button next) but once read then repeat players would not read the instructions again so a better UX was to place them near the end of the page.
  - The initial wireframe had a 2 X 4 box layout. This does not look well on an iPad or mobile. This layout was changed to a 3 x 3 box layout for a better UX.
 - The initial scores section was below the boxes but this would not have been good UX as the players fingers would have obscured the scores. It's a better UX with the scores above the boxes.
 
-[IPad](assets/validation/iPad_Google_inspect.jpg) implementation as seeen on Google Inspect
+[IPad](assets/validation/iPad_Google_inspect.jpg) implementation as seen on Google Inspect.
+[IPhone5/SE](assets/validation/iPhone5SE_Google_inspect.jpg) implementation as seen on Google Inspect.
 
 ## Testing
 The responsivity of the page was verified on all devices on Google inspect.
@@ -121,9 +121,9 @@ The responsivity of the page was verified on all devices on Google inspect.
 The JS code was tested during code development. Setting debug_global = true enables the console.log function.
 The Run Game button was hit repeatedly to ensure a game sequence was generated.
 The JS code was seen to prevent a sequence of numbers containing the same random number.
-The boxes were repeatedly pressed to test the getPlayerSequence function.
+The boxes were also repeatedly pressed to test the getPlayerSequence function.
 When these two operations were seen to be robust a playerLockOut_global variable was added to the JS.
-This variable effectively gave control of both Events to the runGameSequence as the getPlayerSequence could not run until runGameSequence had ran.
+This variable effectively gave control of both Events to the runGameSequence as the getPlayerSequence could not run until the runGameSequence had ran.
 
 The pop up was verified by changing totalNoBoxes_global = 1.
 
@@ -152,7 +152,7 @@ Deployment steps:
 - Open the project in guthub.
 - Select the settings icon on the top right.
 - Select github pages - second last on the left.
-- Select none pull down and select the master branch.
+- Select the none pull down and select the master branch.
 - Select save.
 - This publishes the site on github pages.
  
@@ -182,9 +182,9 @@ The pop up was generated with code from [sweetAlert2](https://sweetalert2.github
 ### Challenges
 
 setTimeout function
-- It took a while to figure out how to use setTimeout as a sequential delay.
-- Initially all squares were updating at the same time but all a fixed delay later.
-- The JS code essentially runs on and cannot be paused but an output can be paused.
+- It took a while to figure out how to use setTimeout as a sequential delay in a loop.
+- Initially all squares were updated at the same time but all a fixed delay later.
+- The JS code essentially runs on and cannot be paused. However an output can be paused.
 - The output delays then need to be multiplied up.
 - [GeeksforGeeks](https://www.geeksforgeeks.org/how-to-add-a-delay-in-a-javascript-loop/) had a clear explanation.
 - I also got caught out here using strings in mathematical calculations.
@@ -290,4 +290,6 @@ Updated README file
 
 Commit README changes
 - 15th May 2021 23:45
- 
+
+Commit README changes
+- 16th May 2021 00:18
