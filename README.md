@@ -15,7 +15,6 @@ User Stories:
 - The game must not appear too educational for the player. Children will engage with educational games but will soon move to something else. They are aware when they are being educated and games can no longer feel like fun.
 - The player must understand how to play the game.
 
-
 Initial Game [Wireframe](assets/wireframes/memory_game.pdf).
 
 ## Features
@@ -116,36 +115,35 @@ Initial Game [Wireframe](assets/wireframes/memory_game.pdf).
 
 
 ## Testing
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+The responsivity of the page was verified on all devices on Google inspect.
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+The JS code was tested during code development. Setting debug_global = true enables the console.log function.
+The Run Game button was hit repeatedly to ensure a game sequence was generated.
+The JS code was seen to prevent a sequence of numbers containing the same random number.
+The boxes were repeatedly pressed to test the getPlayerSequence function.
+When these two operations were seeen to be robust a playerLockOut_global variable was added to the JS.
+This variable effectively gave control of both Events to the runGameSequence as the getPlayerSequence could not run until runGameSequence had ran.
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+The pop up was verified by changing totalNoBoxes_global = 1.
 
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
-
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+The game was run on github and worked successfully. The Run Game button was pressed and the boxes were also pressed during the game sequence but were ignored. Only boxes pressed after the gane sequence were output were acknowledged by the JS code.
+The scores updated correctly for correct and incorrect scores. The level was also successfully updated.
+Pressing the Memory Game Icon reloads the HTML.
 
 
 ## Validation
 
 - [index.html](assets/validation/Nu_Html_Checker.pdf)
-- [style.css](validation/W3C_CSS_Validator_results.pdf)
+    - No Errors or Warnings.
+- [style.css](assets/validation/W3C_CSS_Validator_results.pdf)
+    - Warnings about the button background colour being the same as the border can be ignored as this is by design.
 - [script.js](assets/validation/JSHint.pdf)
+    - One undefined vaiuable Swal. This error goes away when sweetalert2.all.js code is added to JS Hint.
+    - So Swal is declared in the sweetalert the sweetalert2.all.js code.
+    - The sweetalert2.all.js code was searched for _global and there was no match.
+    - So while the _global variables in script.js are not desirable they will not interact with the sweetalert2.all.js code.
 - [Am I Responsive](assets/validation/Am_I_Responsive.jpg)
 - [Web Dev Measure](assets/validation/Lighthouse_Report.pdf)
-
-
-
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially
 
 
 ## Deployment
@@ -156,32 +154,28 @@ Deployment steps:
 - Select none pull down and select the master branch.
 - Select save.
 - This publishes the site on github pages.
-
+ 
 ## Credits
-Project started with Code Institute Challenge 54_JavaScript_HDE_Working_With_Functions.
-Added scores to HTML from Code Institute JavaScript Walkthrough Project.
-
-CodeInstitute
+The First commit was with code from the [Code Institute](https://codeinstitute.net/) Challenge 54_JavaScript_HDE_Working_With_Functions.
+The scores section was completed with code from the [Code Institute](https://codeinstitute.net) JavaScript Walkthrough Project.
+The page colours were generated with code from the [Code Institute](https://codeinstitute.net) Love Running Project.
+The pop up was generated with code from [sweetAlert2](https://sweetalert2.github.io/).
 
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+- There was no text copied to the site from external sources.
 
 ### Media
-- The photos used in this site were obtained from ...
+- There wero no images used in this project.
 
 ### Acknowledgements
-- I received inspiration for this project from SIMON
-- The first commit was a direct 100% copy of Code Institute 54_JavaScript_HDE_Working_With_Functions Challenge
-- Got timeout help from [GeeksforGeeks](https://www.geeksforgeeks.org/how-to-add-a-delay-in-a-javascript-loop/)
-- Scores from CodeInstitute JS Essentials Project.
-- Text overlay from [stackoverflow](https://stackoverflow.com/questions/21395662/overlay-div-on-image)
-- Game over pop up [sweetAlert2](https://sweetalert2.github.io/)
-
-
-- Inspiration for this project was received from .........
-- The format of this README file came from the Code Institute.
-- The template for this project is the Code Institute student template for Gitpod.
-- Excellence Ilesanmi provided mentor support and feedback on the Gym Website pages.
+- I received inspiration for this project from the game [SIMON](https://en.wikipedia.org/wiki/Simon_(game)).
+- The format of this README file came from the [Code Institute](https://codeinstitute.net).
+- The template for this project is the [Code Institute](https://codeinstitute.net) student template for Gitpod.
+- The first commit was a direct 100% copy of [Code Institute](https://codeinstitute.net) 54_JavaScript_HDE_Working_With_Functions Challenge.
+- I got help with the setTimeout function from [GeeksforGeeks](https://www.geeksforgeeks.org/how-to-add-a-delay-in-a-javascript-loop/).
+- The scores section was copied from [Code Institute](https://codeinstitute.net) JS Essentials Project.
+- The Game over pop up was developed with code from [sweetAlert2](https://sweetalert2.github.io/).
+- Excellence Ilesanmi provided mentor support and feedback on this project.
 
 
 ### Challenges
@@ -189,19 +183,20 @@ CodeInstitute
 setTimeout function
 - It took a while to figure out how to use setTimeout as a sequential delay.
 - Initially all squares were updating at the same time but all a fixed delay later.
-- The JS code runs on and cannot be paused but an output can be paused.
+- The JS code essentially runs on and cannot be paused but an output can be paused.
 - The output delays then need to be multiplied up.
-- GeeksforGeeks had a nice explaination.
-- [GeeksforGeeks](https://www.geeksforgeeks.org/how-to-add-a-delay-in-a-javascript-loop/)
-- Also got caught here using strings in mathematical calculations.
+- [GeeksforGeeks](https://www.geeksforgeeks.org/how-to-add-a-delay-in-a-javascript-loop/) had a clear explanation.
+- I also got caught out here using strings in mathematical calculations.
 
 Events
 - The events were modified to remove JSHint warnings.
 - It took a while to figure out the how to capture the actual box that was clicked inside the boxes_section.
 - The answer was event.target.getAttribute("id").
-- Credit JS essentials project which had this line this.getAttribute("data-type")
+- Credit JS essentials project which had this line this.getAttribute("data-type").
 
-overlay to pop up
+Pop up
+- I initiall tried Overlay code but in the end went with the pop up from [sweetAlert2](https://sweetalert2.github.io/).
+
 
 ### Revision History
 Initial commit. Add Project README and Wireframe.
@@ -286,5 +281,9 @@ README Work In Progress
 Pushing files to github to complete validation of deployed site
 - 15th May 2021 19:10
 
-Pushing files to github in case of rebiit due to system updates
+Pushing files to github in case of reboot due to system updates
 - 15th May 2021 19:45
+
+Updated README file
+- 15th May 2021 23:09
+ 

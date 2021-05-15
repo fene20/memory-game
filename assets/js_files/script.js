@@ -399,7 +399,7 @@ function isPlayerSequenceCorrect() {
 function updateLevel(correctScore) {
 
     let level = parseInt(document.getElementById("level").innerText);
-    let scoreAtLevel = 2; // 3 for debug
+    let scoreAtLevel = 5; // 3 for debug
     let nextLevel = 1;
 
     nextLevel = correctScore / scoreAtLevel;
