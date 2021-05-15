@@ -209,7 +209,6 @@ function outputSqrSequence(boxes) {
 function sqrOutDelay(timeIndex, boxId) {
 
     // Credit CodeInstitute JS Essentials Project
-    //let totalNoBoxes = parseInt(document.getElementById("totalBoxes").innerText);
 
     setTimeout(function () {
 
@@ -399,7 +398,6 @@ function isPlayerSequenceCorrect() {
 
 function updateLevel(correctScore) {
 
-    //let totalNoBoxes = parseInt(document.getElementById("totalBoxes").innerText);
     let level = parseInt(document.getElementById("level").innerText);
     let scoreAtLevel = 2; // 3 for debug
     let nextLevel = 1;

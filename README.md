@@ -136,6 +136,28 @@ You should also mention in this section any interesting bugs or problems you dis
 
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
+
+## Validation
+
+- [index.html](assets/validation/Nu_Html_Checker.pdf)
+- [style.css](validation/W3C_CSS_Validator_results.pdf)
+- [script.js](assets/validation/JSHint.pdf)
+
+
+
+
+- [classes.html](assets/code_validation/Showing_results_for_uploaded_file_classes_html_Nu_Html_Checker.pdf)
+- [gallery.html](assets/code_validation/Showing_results_for_uploaded_file_gallery_html_Nu_Html_Checker.pdf) 
+- [contact.html](assets/code_validation/Showing_results_for_uploaded_file_contact_html_Nu_Html_Checker.pdf)
+
+/workspace/memory-game/assets/validation/W3C_CSS_Validator_results.pdf
+/workspace/memory-game/assets/validation/Nu_Html_Checker.pdf
+/workspace/memory-game/assets/validation/JSHint.pdf
+/workspace/memory-game/assets/validation/Nu_Html_Checker.pdf
+
+In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially
+
+
 ## Deployment
 Deployment steps:
 - Open the project in guthub.
@@ -258,3 +280,6 @@ Added sweetAlert2 pop up
 
 README Work In Progress
 - 15th May 2021 18:25
+
+Pushing files to github to complete validation of deployed site
+- 15th May 2021 19:10
