@@ -1,7 +1,7 @@
 # Memory Game
 [Deployed Project](https://fene20.github.io/memory-game//index.html)
 
-This project was developed as a fun game for children and likely adults too. It's inspiration came from the [SIMON](https://en.wikipedia.org/wiki/Simon_(game)) game which was one of the inspiration suggestions for this assessment. The SIMON game had four buttons while this game has nine buttons all the same colour. For full user control the player hits the run game button and then a sequence of squares flashes on screen. The player them repeats the sequence and the score is updated. When the player gets a number of sequences correct the game moves to the next level where one extra square is added to the sequence. When the player gets through to the final level there is a congratulations pop up.
+This project was developed as a fun game for children and likely adults too. It's inspiration came from the [SIMON](https://en.wikipedia.org/wiki/Simon_(game)) game which was one of the inspiration suggestions for this assessment. The SIMON game had four buttons while this game has nine buttons - all the same colour. For full user control the player hits the run game button and then a sequence of squares flashes on screen. The player then repeats the sequence and the score is updated. When the player gets a number of sequences correct the game moves to the next level where one extra square is added to the sequence. When the player gets through to the final level there is a congratulations pop up.
 
 ## UX
 User Stories:
@@ -20,7 +20,7 @@ Initial Game [Wireframe](assets/wireframes/memory_game.pdf).
 ## Features
 ### Existing Features
 - The Memory Game consists of one page. The Icon can be clicked to reload the page. The Icon matches the look of the game.
-- The player game feedback/progress details:- level, correct and incorrect scores are laid out above the game box area. The JS code updates the gmae level and the scores based on the players response.
+- The player game feedback/progress details:- level, correct and incorrect scores are laid out above the game box area. The JS code updates the game level and the scores based on the players response.
 - The box area consists of nine boxes. This could easily be scaled up to e.g. 16 boxes. It would be difficult for most players to remember that many boxes though. These boxes change to red during the game sequence. These boxes change to orange during the player sequence. They change back to green at the end of a game-player sequence. Hitting a box calls the JS function getPlayerSequence.
 - The Run Game button is under the game boxes area. The border colour of the button changes to match where the player is in the game run. Hitting the Run Game button calls the JS function runGameSequence.
 - During a game the player will just want to see the level/scores, the nine boxes and the Run Game button.
@@ -57,7 +57,7 @@ In this section, you should mention all of the languages, frameworks, libraries,
     - This project used **Am I Responsive** to measure the deployed site.
    
 - [Web Dev Measure](https://web.dev/measure/)
-    - This project used **Web Dev Measure** to to measure the deployed site.
+    - This project used **Web Dev Measure** to measure the deployed site.
     - This site is powered by Lighthouse.
     - Lighthouse can also be reached from Google - inspect - Lighthouse.
 
@@ -65,7 +65,7 @@ In this section, you should mention all of the languages, frameworks, libraries,
 ## UX Testing
 Users expect clear visual interaction.
 - The game boxes were configured as reg, green and orange. Three clear colours.
-- The other colours on the page are not used during the gane and are not as strong.
+- The other colours on the page are not used during the game and are not as strong.
 
 The game must be robust against children pressing boxes at the wrong time.
 - The game has two major events:
@@ -92,13 +92,13 @@ The player will want some game feedback to stay engaged with the game.
 Children like games with nice visual effects.
 - The colours red, green and yellow were tried out but were changed to red, green and orange as yellow was too bright.
 - The colour of less important items like the header, instructions and footer are more muted.
-- The colour of the the level and score numbers are highlighted in red.
+- The colour of the level and score numbers are highlighted in red.
 - The game sequence flashes on screen in red. The player sequence is highlighted in orange.
 - All boxes are green at the start and at the end of each game run.
-- The run game button is below the boxes so that a players finger (on the button) will not obsure the game.
+- The run game button is below the boxes so that a players finger (on the button) will not obscure the game.
 - The scores are above the boxes and will not be obscured by fingers pressing the button or the boxes.
-- The game was trialed with a game sequence with two seconds between each red box output. This ws too slow and was speeded up to 1 second between each box.
-- Each box that turns red in the game sequence stays on while the next box is changed to red. So at the end of the sequence all boxes thay were in the sequence stay red. This gives the player (a child) a better chance or remembering the sequence than if the boxes were flased to the screen.
+- The game was trialled with a game sequence with two seconds between each red box output. This was too slow and was speeded up to 1 second between each box.
+- Each box that turns red in the game sequence stays on while the next box is changed to red. So at the end of the sequence all boxes that were in the sequence stay red. This gives the player (a child) a better chance or remembering the sequence than if the boxes were flashed to the screen.
 
 The game must not appear too educational for the player.
 - The boxes were not given letters, numbers or images with cats and dogs etc which may make the game look to much like something from school.
@@ -111,8 +111,9 @@ Initial Game [Wireframe](assets/wireframes/memory_game.pdf).
 - The initial wireframe had the start button at the top. This may have looked nice on the wireframe but would not have been a good UX above the boxes where player fingers would have obscured the nine boxes.
 - The initial wireframe had the instructions above the game box area. The instructions may work there (with level/scores, box area and button next) but once read repeat players would not read the instructions again so a better UX was to place them near the end of the page.
  - The initial wireframe had a 2 X 4 box layout. This does not look well on an iPad or mobile. This layout was changed to a 3 x 3 box layout for a better UX.
-- The inital scores section was below the boxes but this would not have been good UX as the players fingers would have obscured the scores. It's a better UX with the scores above the boxes.
+- The initial scores section was below the boxes but this would not have been good UX as the players fingers would have obscured the scores. It's a better UX with the scores above the boxes.
 
+[IPad](assets/validation/iPad_Google_inspect.jpg) implementation as seeen on Google Inspect
 
 ## Testing
 The responsivity of the page was verified on all devices on Google inspect.
@@ -121,12 +122,12 @@ The JS code was tested during code development. Setting debug_global = true enab
 The Run Game button was hit repeatedly to ensure a game sequence was generated.
 The JS code was seen to prevent a sequence of numbers containing the same random number.
 The boxes were repeatedly pressed to test the getPlayerSequence function.
-When these two operations were seeen to be robust a playerLockOut_global variable was added to the JS.
+When these two operations were seen to be robust a playerLockOut_global variable was added to the JS.
 This variable effectively gave control of both Events to the runGameSequence as the getPlayerSequence could not run until runGameSequence had ran.
 
 The pop up was verified by changing totalNoBoxes_global = 1.
 
-The game was run on github and worked successfully. The Run Game button was pressed and the boxes were also pressed during the game sequence but were ignored. Only boxes pressed after the gane sequence were output were acknowledged by the JS code.
+The game was run on github and worked successfully. The Run Game button was pressed and the boxes were also pressed during the game sequence but were ignored. Only boxes pressed after the game sequence were output were acknowledged by the JS code.
 The scores updated correctly for correct and incorrect scores. The level was also successfully updated.
 Pressing the Memory Game Icon reloads the HTML.
 
@@ -138,8 +139,8 @@ Pressing the Memory Game Icon reloads the HTML.
 - [style.css](assets/validation/W3C_CSS_Validator_results.pdf)
     - Warnings about the button background colour being the same as the border can be ignored as this is by design.
 - [script.js](assets/validation/JSHint.pdf)
-    - One undefined vaiuable Swal. This error goes away when sweetalert2.all.js code is added to JS Hint.
-    - So Swal is declared in the sweetalert the sweetalert2.all.js code.
+    - One undefined variable Swal. This error goes away when sweetalert2.all.js code is added to JS Hint.
+    - So Swal is declared in the sweetalert2.all.js code.
     - The sweetalert2.all.js code was searched for _global and there was no match.
     - So while the _global variables in script.js are not desirable they will not interact with the sweetalert2.all.js code.
 - [Am I Responsive](assets/validation/Am_I_Responsive.jpg)
@@ -195,7 +196,7 @@ Events
 - Credit JS essentials project which had this line this.getAttribute("data-type").
 
 Pop up
-- I initiall tried Overlay code but in the end went with the pop up from [sweetAlert2](https://sweetalert2.github.io/).
+- I initially tried Overlay code but in the end went with the pop up from [sweetAlert2](https://sweetalert2.github.io/).
 
 
 ### Revision History
@@ -286,4 +287,7 @@ Pushing files to github in case of reboot due to system updates
 
 Updated README file
 - 15th May 2021 23:09
+
+Commit README changes
+- 15th May 2021 23:45
  
