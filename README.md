@@ -57,12 +57,11 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - [Am I Responsive](http://ami.responsivedesign.is/)
     - This project used **Am I Responsive** to measure the deployed site.
    
-- [Web Dev Measure](https://sweetalert2.github.io/)
+- [Web Dev Measure](https://web.dev/measure/)
     - This project used **Web Dev Measure** to to measure the deployed site.
+    - This site is powered by Lighthouse.
+    - Lighthouse can also be reached from Google - inspect - Lighthouse.
 
-- [Lighthouse](https://developers.google.com/web/tools/lighthouse)
-    - This project used **Lighthouse** to to measure the deployed site.
-    - Usage is: Right click - Inspect - Select Lighthouse.
 
 ## UX Testing
 Users expect clear visual interaction.
@@ -116,7 +115,6 @@ Initial Game [Wireframe](assets/wireframes/memory_game.pdf).
 - The inital scores section was below the boxes but this would not have been good UX as the players fingers would have obscured the scores. It's a better UX with the scores above the boxes.
 
 
-
 ## Testing
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
@@ -142,18 +140,10 @@ If this section grows too long, you may want to split it off into a separate fil
 - [index.html](assets/validation/Nu_Html_Checker.pdf)
 - [style.css](validation/W3C_CSS_Validator_results.pdf)
 - [script.js](assets/validation/JSHint.pdf)
+- [Am I Responsive](assets/validation/Am_I_Responsive.jpg)
+- [Web Dev Measure](assets/validation/Lighthouse_Report.pdf)
 
 
-
-
-- [classes.html](assets/code_validation/Showing_results_for_uploaded_file_classes_html_Nu_Html_Checker.pdf)
-- [gallery.html](assets/code_validation/Showing_results_for_uploaded_file_gallery_html_Nu_Html_Checker.pdf) 
-- [contact.html](assets/code_validation/Showing_results_for_uploaded_file_contact_html_Nu_Html_Checker.pdf)
-
-/workspace/memory-game/assets/validation/W3C_CSS_Validator_results.pdf
-/workspace/memory-game/assets/validation/Nu_Html_Checker.pdf
-/workspace/memory-game/assets/validation/JSHint.pdf
-/workspace/memory-game/assets/validation/Nu_Html_Checker.pdf
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially
 
@@ -171,6 +161,8 @@ Deployment steps:
 Project started with Code Institute Challenge 54_JavaScript_HDE_Working_With_Functions.
 Added scores to HTML from Code Institute JavaScript Walkthrough Project.
 
+CodeInstitute
+
 ### Content
 - The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
 
@@ -178,14 +170,23 @@ Added scores to HTML from Code Institute JavaScript Walkthrough Project.
 - The photos used in this site were obtained from ...
 
 ### Acknowledgements
-- I received inspiration for this project from X . . . . 
+- I received inspiration for this project from SIMON
 - The first commit was a direct 100% copy of Code Institute 54_JavaScript_HDE_Working_With_Functions Challenge
 - Got timeout help from [GeeksforGeeks](https://www.geeksforgeeks.org/how-to-add-a-delay-in-a-javascript-loop/)
 - Scores from CodeInstitute JS Essentials Project.
 - Text overlay from [stackoverflow](https://stackoverflow.com/questions/21395662/overlay-div-on-image)
 - Game over pop up [sweetAlert2](https://sweetalert2.github.io/)
 
+
+- Inspiration for this project was received from .........
+- The format of this README file came from the Code Institute.
+- The template for this project is the Code Institute student template for Gitpod.
+- Excellence Ilesanmi provided mentor support and feedback on the Gym Website pages.
+
+
 ### Challenges
+
+setTimeout function
 - It took a while to figure out how to use setTimeout as a sequential delay.
 - Initially all squares were updating at the same time but all a fixed delay later.
 - The JS code runs on and cannot be paused but an output can be paused.
@@ -194,6 +195,7 @@ Added scores to HTML from Code Institute JavaScript Walkthrough Project.
 - [GeeksforGeeks](https://www.geeksforgeeks.org/how-to-add-a-delay-in-a-javascript-loop/)
 - Also got caught here using strings in mathematical calculations.
 
+Events
 - The events were modified to remove JSHint warnings.
 - It took a while to figure out the how to capture the actual box that was clicked inside the boxes_section.
 - The answer was event.target.getAttribute("id").
@@ -283,3 +285,6 @@ README Work In Progress
 
 Pushing files to github to complete validation of deployed site
 - 15th May 2021 19:10
+
+Pushing files to github in case of rebiit due to system updates
+- 15th May 2021 19:45
