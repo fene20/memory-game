@@ -71,7 +71,6 @@ header h2 {
 /* -------------------- level -------------------- */
 
 #level_section {
-
     height: 40px;
     line-height: 40px;
     font-size: 100%;
@@ -127,7 +126,6 @@ header h2 {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
-
 }
 
 
@@ -338,6 +336,12 @@ button {
         font-size: 100%;
     }
 
+
+    #info_section h2 {
+    height: 40px;
+    font-size: 120%;
+    margin-bottom: 5px;
+}
 
     /* -------------------- dummy footer max-width: 600px -------------------- */
 

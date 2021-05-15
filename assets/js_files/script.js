@@ -9,7 +9,7 @@ var totalNoBoxes_global = 9;
 
 // A player can click buttons as they flash on screen, i.e. cheat, so need to lock this out.
 var playerLockOut_global = true; // true - player cannot change color before the game starts.
-var debug_global = true;
+var debug_global = false;
 
 // This script has 2 significant function calls
 // runGameSequence() which is called when the Start button is pressed/clicked.
@@ -82,8 +82,9 @@ function runGameSequence() {
     playerSequence_global.push("test"); // add any text to prevent reading undefined later.
 
     if (debug_global === true) {
-        console.log("");
+        console.log("***************************");
         console.log(`Player Array at Start: ${playerSequence_global}`);
+        console.log("***************************");
     }
 
     gameSequence_global = genSqrSequence();
@@ -102,6 +103,8 @@ function genSqrSequence() {
     // lockOut but the code may no longer be robust. Easy solution is to let the user run multiple atarts and
     // get an incorrect answer. The code below will change the squares back to red however.
     // Repeating the last button sequence to flash will give a correct score.
+
+    let idOff = [""];
 
     // Turn all boxes green.
     for (let i = 0; i < totalNoBoxes_global; i++) {
@@ -417,7 +420,7 @@ function updateLevel(correctScore) {
 
         Swal.fire(
             'Game Over',
-            'Congratulations on finishing the game!',
+            'Congratulations on finishing the game!'
         );
     }
 
