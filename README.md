@@ -1,5 +1,5 @@
 # Memory Game
-[Deployed Project](https://fene20.github.io/memory-game//index.html)
+[Deployed Project](https://fene20.github.io/memory-game/)
 
 This project was developed as a fun game for children and likely adults too. It's inspiration came from the [SIMON](https://en.wikipedia.org/wiki/Simon_(game)) game which was one of the inspiration suggestions for this assessment. The SIMON game had four buttons while this game has nine buttons - all the same colour. For full user control the player hits the run game button and then a sequence of squares flashes on screen. The player then repeats the sequence and the score is updated. When the player gets a number of sequences correct the game moves to the next level where one extra square is added to the sequence. When the player gets through to the final level there is a congratulations pop up.
 
@@ -307,3 +307,6 @@ Commit README changes
 
 Commit README changes
 - 16th May 2021 00:28
+
+Updated deployed Project URL in README
+- 16th May 2021 01:06
